@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyFriends, discípulos que fazem discípulos</title>
+<meta name="description" content="O MyFriends ajuda cristãos e igrejas a viver a missão de Jesus no dia a dia, resgatando a simplicidade do seu exemplo e estilo de vida." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif; font-weight: 400;
+    background: #FFFFFF;
+    color: #38383d;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Clash Display Variable', 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #dee3e5;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 12px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; }
+  .brand img { height: 68px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { color: #38383d; font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: #d70f15; }
+
+  main { padding-top: 72px; }
+
+  section { padding: 80px 32px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* HERO */
+  .hero { text-align: center; padding: 120px 32px 100px; background: #dee3e5; }
+  .hero h1 { font-size: 56px; max-width: 900px; margin: 0 auto 24px; letter-spacing: -0.02em; color: #38383d; }
+  .hero p { color: #6e7d8c; max-width: 680px; margin: 0 auto 40px; font-size: 17px; }
+  .btn-primary {
+    display: inline-block;
+    background: #d70f15; color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 32px;
+    border: none; border-radius: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-dark {
+    display: inline-block;
+    background: #38383d; color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 32px;
+    border: none; border-radius: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  /* SOBRE */
+  .section-title { font-size: 40px; margin-bottom: 40px; letter-spacing: -0.02em; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .two-col p { color: #38383d; font-size: 16px; }
+  .stat-box {
+    background: #d70f15;
+    padding: 32px;
+  }
+  .stat { font-weight: 700; font-size: 18px; color: #fff; padding: 12px 0; }
+  .stat-divider { height: 2px; background: #fff; width: 40px; opacity: 0.6; }
+
+  /* FORMACAO INTRO (MyFriends training) */
+  .training { background: #dee3e5; }
+  .training .container { text-align: center; }
+  .training h2 { font-size: 40px; margin-bottom: 16px; }
+  .training .lead { color: #6e7d8c; max-width: 720px; margin: 0 auto 40px; font-size: 17px; }
+  .training-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: left; }
+  .training-card { background: #fff; padding: 28px; border-left: 4px solid #d70f15; }
+  .training-card h3 { font-size: 20px; margin-bottom: 10px; }
+  .training-card p { color: #6e7d8c; font-size: 15px; }
+
+  /* MESA DE PROVA */
+  .mesa {
+    background: #d70f15; color: #fff;
+  }
+  .mesa h2 { font-size: 48px; margin-bottom: 12px; color: #fff; }
+  .mesa .subtitle { font-size: 20px; margin-bottom: 32px; font-weight: 500; }
+  .mesa .lead { max-width: 760px; font-size: 16px; margin-bottom: 48px; }
+  .mesa-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .mesa-card {
+    background: rgba(0,0,0,0.15);
+    padding: 24px;
+    color: #fff;
+  }
+  .mesa-card h3 { font-family: 'Clash Display Variable', 'Clash Display', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 12px; color: #fff; }
+  .mesa-card p { font-size: 15px; }
+
+  /* PERCURSOS */
+  .percursos { background: #fff; }
+  .percursos .intro { color: #6e7d8c; max-width: 700px; margin-bottom: 48px; font-size: 16px; }
+  .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .prog-card {
+    background: #fff;
+    border: 1px solid #dee3e5;
+    padding: 32px;
+  }
+  .prog-marker { width: 48px; height: 4px; background: #d70f15; margin-bottom: 20px; }
+  .prog-card h3 { font-size: 26px; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .prog-card .sub { font-weight: 600; font-size: 15px; margin-bottom: 16px; color: #38383d; }
+  .prog-card .body { color: #6e7d8c; font-size: 15px; margin-bottom: 20px; }
+  .prog-card .tag { color: #d70f15; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+
+  /* CTA FINAL */
+  .final-cta { background: #dee3e5; text-align: center; }
+  .final-cta h2 { font-size: 40px; margin-bottom: 16px; }
+  .final-cta p { color: #6e7d8c; max-width: 640px; margin: 0 auto 32px; font-size: 17px; }
+  .final-cta .ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* CONTACTO */
+  .contacto { background: #38383d; text-align: center; color: #fff; }
+  .contacto-inner { max-width: 600px; margin: 0 auto; }
+  .contacto h2 { font-size: 40px; margin-bottom: 20px; color: #fff; }
+  .contacto p { color: #dee3e5; margin-bottom: 32px; }
+  .contact-info { margin-bottom: 32px; }
+  .contact-info .name { font-weight: 700; font-size: 20px; color: #fff; }
+  .contact-info .phone { font-size: 18px; margin-top: 4px; color: #dee3e5; }
+
+  .contact-form { display: grid; gap: 12px; margin-bottom: 24px; text-align: left; }
+  .contact-form input, .contact-form textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid #6e7d8c; background: #fff; color: #38383d;
+    font-family: inherit; font-size: 15px; border-radius: 0;
+  }
+  .contact-form textarea { min-height: 120px; resize: vertical; }
+  .contact-form button { background: #d70f15; color: #fff; padding: 14px; border: none; font-weight: 700; cursor: pointer; font-family: inherit; font-size: 15px; }
+
+  /* FOOTER */
+  footer {
+    background: #fff;
+    border-top: 1px solid #dee3e5;
+    padding: 48px 32px 24px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .footer-left .brand img { height: 40px; }
+  .footer-left .partner { font-size: 13px; color: #38383d; margin-top: 6px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: #6e7d8c; font-size: 13px; }
+  .footer-bottom { text-align: center; color: #6e7d8c; font-size: 12px; margin-top: 32px; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    section { padding: 48px 20px; }
+    .hero { padding: 80px 20px 60px; }
+    .hero h1 { font-size: 32px; }
+    .section-title { font-size: 28px; }
+    .nav-inner { padding: 10px 20px; }
+    .brand img { height: 52px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 13px; }
+    .two-col { grid-template-columns: 1fr; gap: 32px; }
+    .mesa h2 { font-size: 32px; }
+    .mesa-cards { grid-template-columns: 1fr; }
+    .training-grid { grid-template-columns: 1fr; }
+    .prog-grid { grid-template-columns: 1fr; }
+    .contacto h2, .final-cta h2, .training h2 { font-size: 28px; }
+    .footer-inner { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="myfriends-logo.svg" alt="MyFriends" />
+    </a>
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#formacao">Formação</a>
+      <a href="#percursos">Percursos</a>
+      <a href="#mesa-de-prova">Mesa de Prova</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Estamos realmente a formar discípulos que fazem discípulos?</h1>
+    <p>O MyFriends ajuda cristãos e igrejas a viver essa missão no dia a dia, resgatando a simplicidade do exemplo e do estilo de vida de Jesus.</p>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">O que fazemos</h2>
+      <div class="two-col">
+        <div>
+          <p>Como cristãos, alegramo-nos com cada vida que se transforma e renova pelo Evangelho. Mas perante a complexidade da missão urbana, há uma inquietação que muitos partilham. Estamos apenas a somar pessoas às nossas comunidades, ou estamos de facto a formar discípulos que fazem discípulos? O MyFriends existe para ajudar pessoas e igrejas a responder a essa pergunta, com ferramentas práticas, imersões presenciais e um processo que acompanha a tua comunidade ao longo do tempo.</p>
+        </div>
+        <div class="stat-box">
+          <div class="stat">Missão urbana como estilo de vida</div>
+          <div class="stat-divider"></div>
+          <div class="stat">Discipulado que se multiplica</div>
+          <div class="stat-divider"></div>
+          <div class="stat">Ferramentas para cristãos e igrejas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACAO MYFRIENDS -->
+  <section id="formacao" class="training">
+    <div class="container">
+      <h2>O que é a Formação MyFriends</h2>
+      <p class="lead">É um caminho simples e acessível para qualquer cristão aprender a viver a missão de Jesus na sua rotina. Não precisas de ser pastor, teólogo ou líder, precisas apenas de uma vida real, com pessoas reais à tua volta. Foi pensada para pessoas comuns que querem viver a fé de forma natural com amigos, família e vizinhos, ajudando-te a integrar o exemplo de Jesus nas tuas conversas, na tua rotina e nos teus relacionamentos. Tudo é vivido em comunidade, num pequeno grupo onde partilhas o processo, as descobertas e as histórias pelo caminho.</p>
+    </div>
+  </section>
+
+  <!-- MESA DE PROVA -->
+  <section id="mesa-de-prova" class="mesa">
+    <div class="container">
+      <h2>Mesa de Prova</h2>
+      <div class="subtitle">O modelo de Jesus e o "Terroir" da tua igreja</div>
+      <p class="lead">Uma sessão de exploração de 3 horas. Não é para dar respostas prontas. É para criares espaço para explorares o tema e saíres com perguntas diferentes e mais desafiadoras do que aquelas com que entraste.</p>
+      <div class="mesa-cards">
+        <div class="mesa-card">
+          <h3>A Cepa Original</h3>
+          <p>Aprender com a cronologia de Jesus como ele construiu o seu movimento.</p>
+        </div>
+        <div class="mesa-card">
+          <h3>Avaliar o teu Solo</h3>
+          <p>Diagnosticar a realidade da tua igreja e possíveis obstáculos para a multiplicação.</p>
+        </div>
+        <div class="mesa-card">
+          <h3>Odres Novos</h3>
+          <p>Explorar a transição para uma cultura focada em fazer discípulos na cidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERCURSOS -->
+  <section id="percursos" class="percursos">
+    <div class="container">
+      <h2 class="section-title">Percursos para a tua vida e igreja</h2>
+      <p class="intro">Após a Mesa de Prova, se desejares ir mais fundo, criámos estes percursos.</p>
+      <div class="prog-grid">
+
+        <div class="prog-card">
+          <div class="prog-marker"></div>
+          <h3>SHIFT m2M</h3>
+          <div class="sub">O modelo de Jesus para líderes.</div>
+          <div class="body">Uma imersão profunda para líderes cristãos descobrirem como Jesus fez discípulos e liderou o seu movimento, que dura até hoje.</div>
+          <div class="tag">3 sessões presenciais de 3 dias, leitura cronológica</div>
+        </div>
+
+        <div class="prog-card">
+          <div class="prog-marker"></div>
+          <h3>Formação MyFriends</h3>
+          <div class="sub">Fazer discípulos como estilo de vida.</div>
+          <div class="body">Aprende a integrar a missão de Jesus na tua rotina diária e nos teus relacionamentos naturais, vivendo a fé de forma orgânica.</div>
+          <div class="tag">3 fins de semana, grupo semanal</div>
+        </div>
+
+        <div class="prog-card">
+          <div class="prog-marker"></div>
+          <h3>Grupo que VAI!</h3>
+          <div class="sub">O primeiro passo para desafiar outros.</div>
+          <div class="body">Uma ferramenta prática para discípulos que já fazem discípulos ajudarem novos amigos a iniciar a jornada de "pescar pessoas".</div>
+          <div class="tag">Online, 6 a 8 semanas</div>
+        </div>
+
+        <div class="prog-card">
+          <div class="prog-marker"></div>
+          <h3>ITGM, Invitation to God Movements</h3>
+          <div class="sub">Missão urbana em equipa.</div>
+          <div class="body">Um espaço focado em pensar o discipulado na cidade e formar equipas de discípulos que multiplicam discípulos.</div>
+          <div class="tag">Online, 8 semanas, adult learning</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Próximos passos</h2>
+      <p>Dá o primeiro passo prático com amigos. Junta-te ao Grupo que VAI!</p>
+      <div class="ctas">
+        <a class="btn-primary" href="grupo-que-vai.html">Começa pelo Grupo que VAI!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="contacto-inner">
+      <h2>Fala connosco</h2>
+      <p>Se tens interesse na Mesa de Prova, na Formação MyFriends ou em qualquer outro percurso, fala diretamente com o Pepê.</p>
+      <div class="contact-info">
+        <div class="name">Pepê Wagner</div>
+        <div class="phone"><a href="tel:+351933549377">933 549 377</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="brand">
+        <img src="myfriends-logo.svg" alt="MyFriends" />
+      </div>
+      <div class="partner">AGAPE Portugal</div>
+    </div>
+    <div class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#formacao">Formação</a>
+      <a href="#percursos">Percursos</a>
+      <a href="#mesa-de-prova">Mesa de Prova</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 MyFriends, AGAPE Portugal</div>
+</footer>
+
+</body>
+</html>

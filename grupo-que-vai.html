@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grupo que VAI! — Livro de Exercícios | MyFriends</title>
+<meta name="description" content="Grupo que VAI!, um percurso prático de 8 semanas para capacitar cristãos para a Grande Comissão." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif; font-weight: 400;
+    background: #FFFFFF;
+    color: #38383d;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Clash Display Variable', 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
+  a { color: inherit; text-decoration: none; }
+
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #dee3e5;
+    z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 12px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; }
+  .brand img { height: 68px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { color: #38383d; font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: #d70f15; }
+
+  main { padding-top: 72px; }
+  section { padding: 80px 32px; }
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .hero { text-align: center; padding: 120px 32px 80px; background: #dee3e5; }
+  .hero h1 { font-size: 48px; max-width: 820px; margin: 0 auto 24px; letter-spacing: -0.02em; }
+  .intro-section { background: #fff; }
+  .intro-section p { font-size: 17px; color: #38383d; }
+
+  .download { background: #d70f15; color: #fff; text-align: center; }
+  .download h2 { color: #fff; font-size: 36px; margin-bottom: 16px; }
+  .download p { color: #fff; max-width: 600px; margin: 0 auto 32px; font-size: 16px; }
+
+  .btn-primary {
+    display: inline-block;
+    background: #d70f15; color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 32px;
+    border: none; border-radius: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-on-red {
+    display: inline-block;
+    background: #fff; color: #d70f15;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 32px;
+    border: none; border-radius: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .contacto { background: #38383d; text-align: center; color: #fff; }
+  .contacto-inner { max-width: 700px; margin: 0 auto; }
+  .contacto h2 { font-size: 36px; margin-bottom: 20px; color: #fff; }
+  .contacto .encouragement { color: #dee3e5; margin-bottom: 32px; font-size: 16px; }
+  .contact-info .name { font-weight: 700; font-size: 20px; color: #fff; }
+  .contact-info .phone { font-size: 22px; margin-top: 8px; color: #fff; }
+  .contact-info .phone a { color: #fff; }
+
+  footer {
+    background: #fff;
+    border-top: 1px solid #dee3e5;
+    padding: 48px 32px 24px;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 32px; flex-wrap: wrap;
+  }
+  .footer-left .brand img { height: 40px; }
+  .footer-left .partner { font-size: 13px; color: #38383d; margin-top: 6px; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { color: #6e7d8c; font-size: 13px; }
+  .footer-bottom { text-align: center; color: #6e7d8c; font-size: 12px; margin-top: 32px; }
+
+  @media (max-width: 768px) {
+    section { padding: 48px 20px; }
+    .hero { padding: 80px 20px 48px; }
+    .hero h1 { font-size: 30px; }
+    .nav-inner { padding: 10px 20px; }
+    .brand img { height: 52px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 13px; }
+    .download h2, .contacto h2 { font-size: 26px; }
+    .footer-inner { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <img src="myfriends-logo.svg" alt="MyFriends" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#formacao">Formação</a>
+      <a href="index.html#percursos">Percursos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <h1>Grupo que VAI! — Livro de Exercícios</h1>
+  </section>
+
+  <section class="intro-section">
+    <div class="container">
+      <p>Este é um percurso prático focado em capacitar cristãos para a Grande Comissão. Desenhado para ser vivido ao longo de 8 semanas, este material é melhor experienciado em pequenos grupos. Desafiamos-te a juntar um grupo de amigos ou membros da tua comunidade para o explorarem juntos! Vais aprofundar o teu entendimento sobre o Reino de Deus, alinhar a tua identidade como filho do Pai, aprender diretamente com o estilo de vida de Jesus e descobrir ferramentas simples para começar grupos de descoberta que se multiplicam naturalmente.</p>
+    </div>
+  </section>
+
+  <section class="download">
+    <div class="container">
+      <h2>Livro de Exercícios</h2>
+      <p>Descarrega o guia completo em PDF e começa o teu percurso de 8 semanas com o teu grupo.</p>
+      <a class="btn-on-red" href="https://drive.google.com/file/d/1TvFjOyexWEZo78TR4Gvaxrp7V1ypUIX6/view?usp=drive_link" target="_blank" rel="noopener">Descarregar Guia Completo (PDF)</a>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <div class="contacto-inner">
+      <h2>Fala connosco</h2>
+      <p class="encouragement">Vais iniciar o Grupo que VAI? Encorajamos-te vivamente a contactar-nos! O nosso acompanhamento (coaching) durante estas 8 semanas faz toda a diferença para a tua experiência e para a implementação prática deste estilo de vida. Usa o número abaixo para falar connosco e marcar o teu acompanhamento.</p>
+      <div class="contact-info">
+        <div class="name">Pepê Wagner</div>
+        <div class="phone"><a href="tel:+351933549377">933 549 377</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="brand">
+        <img src="myfriends-logo.svg" alt="MyFriends" />
+      </div>
+      <div class="partner">AGAPE Portugal</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#formacao">Formação</a>
+      <a href="index.html#percursos">Percursos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 MyFriends, AGAPE Portugal</div>
+</footer>
+
+</body>
+</html>
