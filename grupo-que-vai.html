@@ -71,13 +71,16 @@
     font-family: inherit;
   }
 
-  .contacto { background: #38383d; text-align: center; color: #fff; }
-  .contacto-inner { max-width: 700px; margin: 0 auto; }
-  .contacto h2 { font-size: 36px; margin-bottom: 20px; color: #fff; }
-  .contacto .encouragement { color: #dee3e5; margin-bottom: 32px; font-size: 16px; }
-  .contact-info .name { font-weight: 700; font-size: 20px; color: #fff; }
-  .contact-info .phone { font-size: 22px; margin-top: 8px; color: #fff; }
-  .contact-info .phone a { color: #fff; }
+  .contacto { background: #38383d; color: #fff; }
+  .contacto-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+  }
+  .contacto h2 { font-size: 28px; margin-bottom: 16px; color: #fff; }
+  .contacto-text p { color: #dee3e5; font-size: 16px; }
+  .contacto .encouragement { color: #dee3e5; font-size: 16px; }
+  .tally-wrap { background: #fff; padding: 12px; }
+  .tally-wrap iframe { width: 100%; border: 0; display: block; }
 
   footer {
     background: #fff;
@@ -104,6 +107,7 @@
     .nav-links { gap: 14px; }
     .nav-links a { font-size: 13px; }
     .download h2, .contacto h2 { font-size: 26px; }
+    .contacto-grid { grid-template-columns: 1fr; gap: 32px; }
     .footer-inner { flex-direction: column; }
   }
 </style>
@@ -145,12 +149,13 @@
   </section>
 
   <section class="contacto">
-    <div class="contacto-inner">
-      <h2>Fala connosco</h2>
-      <p class="encouragement">Vais iniciar o Grupo que VAI? Encorajamos-te vivamente a contactar-nos! O nosso acompanhamento (coaching) durante estas 8 semanas faz toda a diferença para a tua experiência e para a implementação prática deste estilo de vida. Usa o número abaixo para falar connosco e marcar o teu acompanhamento.</p>
-      <div class="contact-info">
-        <div class="name">Pepê Wagner</div>
-        <div class="phone"><a href="tel:+351933549377">933 549 377</a></div>
+    <div class="contacto-grid">
+      <div class="contacto-text">
+        <h2>Fala connosco</h2>
+        <p class="encouragement">Vais iniciar o Grupo que VAI? Encorajamos-te vivamente a contactar-nos! O nosso acompanhamento (coaching) durante estas 8 semanas faz toda a diferença para a tua experiência e para a implementação prática deste estilo de vida. Usa o número abaixo para falar connosco e marcar o teu acompanhamento.</p>
+      </div>
+      <div class="tally-wrap">
+        <iframe src="https://tally.so/embed/D4ZNzE?alignLeft=1&hideTitle=1&dynamicHeight=1" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe>
       </div>
     </div>
   </section>
