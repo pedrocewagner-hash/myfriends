@@ -403,8 +403,55 @@
         <h2>Fala connosco</h2>
         <p>Se tens interesse na Mesa de Prova, na Formação MyFriends ou em qualquer outro percurso, preenche este formulário e vamos entrar em contacto contigo.</p>
       </div>
-      <div class="tally-wrap">
-        <iframe src="https://tally.so/embed/D4ZNzE?alignLeft=1&hideTitle=1&dynamicHeight=1&transparentBackground=1" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe>
+      <div class="contacto-form-wrap">
+        <style>
+          .myfriends-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+          .myfriends-form input,
+          .myfriends-form textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            background-color: #FAFAFA;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+          }
+          .myfriends-form input:focus,
+          .myfriends-form textarea:focus {
+            outline: none;
+            border-color: #E2211C;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(226, 33, 28, 0.1);
+          }
+          .myfriends-form button {
+            background-color: #E2211C;
+            color: #FFFFFF;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .myfriends-form button:hover {
+            background-color: #C11B17;
+          }
+        </style>
+      
+        <form class="myfriends-form" action="LINK_DO_FORMSPREE_AQUI" method="POST">
+          <input type="text" name="Nome" placeholder="O teu nome" required>
+          <input type="email" name="Email" placeholder="O teu email" required>
+          <textarea name="Mensagem" rows="5" placeholder="Em que percurso tens interesse ou como podemos ajudar?" required></textarea>
+          <button type="submit">Enviar Mensagem</button>
+        </form>
       </div>
     </div>
   </section>
