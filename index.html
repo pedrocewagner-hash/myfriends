@@ -15,228 +15,193 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  /* ============================================
-     MOBILE-FIRST CSS
+/* ============================================
+     BASE & MOBILE-FIRST
      ============================================ */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { 
-    scroll-behavior: smooth; 
-    scroll-padding-top: 80px; /* Compensa a altura do menu fixo */
-  }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   body {
     font-family: 'Montserrat', sans-serif; font-weight: 400;
-    background: #FFFFFF;
-    color: #38383d;
-    line-height: 1.6;
+    background: #FFFFFF; color: #38383d; line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: 'Clash Display Variable', 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
+  h1, h2, h3 { font-family: 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; display: block; }
 
-  /* NAV */
+  /* ============================================
+     NAVEGAÇÃO (PADRÃO UNIVERSAL)
+     ============================================ */
   .nav {
     position: fixed; top: 0; left: 0; right: 0;
-    background: #FFFFFF;
-    border-bottom: 1px solid #dee3e5;
-    z-index: 100;
+    background: #FFFFFF; border-bottom: 1px solid #dee3e5; z-index: 100;
   }
   .nav-inner {
-    max-width: 1200px; margin: 0 auto;
-    padding: 10px 20px;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 12px;
+    max-width: 1200px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
   }
-  .brand { display: flex; align-items: center; }
   .brand img { height: 44px; width: auto; }
   .nav-links { display: none; gap: 14px; }
-  .nav-links a { color: #38383d; font-size: 13px; font-weight: 500; }
+  .nav-links a { color: #38383d; font-size: 13px; font-weight: 500; transition: color 0.2s; }
   .nav-links a:hover { color: #d70f15; }
 
-  main { padding-top: 68px; }
-
-  section { padding: 56px 20px; }
+  /* ============================================
+     ESTRUTURA E GRELHAS GERAIS
+     ============================================ */
+  main { padding-top: 64px; }
+  section { padding: 64px 20px; }
   .container { max-width: 1100px; margin: 0 auto; }
-
-  /* HERO */
-  .hero { text-align: center; padding: 80px 20px 60px; background: #dee3e5; }
-  .hero h1 { font-size: 32px; max-width: 900px; margin: 0 auto 20px; letter-spacing: -0.02em; color: #38383d; }
-  .hero p { color: #6e7d8c; max-width: 680px; margin: 0 auto 32px; font-size: 16px; }
+  
   .btn-primary {
     display: inline-block; background: #d70f15; color: #fff;
-    font-weight: 700; font-size: 15px; padding: 14px 28px;
-    border: none; cursor: pointer; font-family: inherit;
+    font-weight: 700; font-size: 15px; padding: 16px 32px;
+    border: none; cursor: pointer; transition: background 0.3s;
   }
+  .btn-primary:hover { background: #b00b11; }
 
-  /* SOBRE */
-  .section-title { font-size: 28px; margin-bottom: 28px; letter-spacing: -0.02em; }
   .two-col { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
-  .two-col p { color: #38383d; font-size: 16px; }
-  .stat-box { background: #d70f15; padding: 28px; }
+  .section-title { font-size: clamp(28px, 4vw, 40px); margin-bottom: 24px; letter-spacing: -0.02em; }
+
+  /* ============================================
+     HERO & SOBRE
+     ============================================ */
+  .hero { text-align: center; padding: 80px 20px 60px; background: #dee3e5; }
+  .hero h1 { font-size: clamp(36px, 5vw, 56px); max-width: 900px; margin: 0 auto 20px; letter-spacing: -0.02em; }
+  .hero p { color: #6e7d8c; max-width: 680px; margin: 0 auto 32px; font-size: clamp(16px, 2vw, 18px); text-wrap: balance; }
+
+  .stat-box { background: #d70f15; padding: 32px; }
   .stat { font-weight: 700; font-size: 17px; color: #fff; padding: 12px 0; }
   .stat-divider { height: 2px; background: #fff; width: 40px; opacity: 0.6; }
 
-  /* CONTRASTS */
-  .contrasts { background: #fff; }
-  .contrasts h2 { font-size: 28px; margin-bottom: 40px; letter-spacing: -0.02em; max-width: 900px; }
-  .contrast-item {
-    display: grid; grid-template-columns: 80px 1fr; gap: 16px;
-    align-items: start; padding: 28px 0;
-    border-top: 1px solid #dee3e5;
+  /* ============================================
+     CONTRASTES (PADRÃO PASSO-CARD)
+     ============================================ */
+  .passo-card {
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+    padding: 40px 0; border-top: 1px solid #dee3e5;
   }
-  .contrast-item:last-child { border-bottom: 1px solid #dee3e5; }
-  .contrast-num {
-    font-family: 'Clash Display Variable', 'Clash Display', sans-serif;
-    font-weight: 600; font-size: 72px; line-height: 1; color: #d70f15;
-    letter-spacing: -0.04em;
+  .passo-card:last-child { border-bottom: 1px solid #dee3e5; }
+  
+  .passo-num { 
+    font-family: 'Clash Display', sans-serif; font-size: 80px;
+    line-height: 0.8; color: #dee3e5; font-weight: 600;
   }
-  .contrast-body h3 { font-size: 20px; margin-bottom: 10px; color: #38383d; }
-  .contrast-body p { color: #6e7d8c; font-size: 15px; }
+  
+  .passo-content h3 {
+    color: #d70f15; font-size: clamp(32px, 4vw, 40px); 
+    text-transform: uppercase; letter-spacing: 0.05em; 
+    margin-bottom: 16px; font-weight: 600;
+  }
 
-  /* FORMACAO INTRO */
-  .training { background: #dee3e5; }
-  .training .container { text-align: center; }
-  .training h2 { font-size: 28px; margin-bottom: 16px; }
+  /* ============================================
+     FORMAÇÃO & MESA DE PROVA
+     ============================================ */
+  .training { background: #dee3e5; text-align: center; }
   .training .lead { color: #6e7d8c; max-width: 720px; margin: 0 auto; font-size: 16px; }
 
-  /* MESA DE PROVA — dark theme, text only */
-  .mesa { background: #38383d; color: #dee3e5; }
-  .mesa .container { max-width: 900px; text-align: center; }
-  .mesa h2 { font-size: 32px; margin-bottom: 8px; color: #ffffff; }
-  .mesa .subtitle { font-size: 17px; margin-bottom: 22px; font-weight: 500; color: #dee3e5; opacity: 0.9; }
-  .mesa .lead { font-size: 16px; margin: 0 auto 36px; max-width: 720px; color: #dee3e5; }
-  .mesa-list {
-    list-style: none; padding: 0; margin: 0;
-    display: grid; grid-template-columns: 1fr; gap: 0;
-    text-align: left;
-  }
-  .mesa-list li {
-    padding: 20px 0 20px 26px; position: relative;
-    border-top: 1px solid rgba(222,227,229,0.18);
-    font-size: 15px; color: #dee3e5;
-  }
+  .mesa { background: #38383d; color: #dee3e5; text-align: center; }
+  .mesa .container { max-width: 900px; }
+  .mesa h2 { color: #ffffff; margin-bottom: 8px; }
+  .mesa .subtitle { font-size: 17px; margin-bottom: 24px; font-weight: 500; color: #dee3e5; opacity: 0.9; }
+  .mesa .lead { font-size: 16px; margin: 0 auto 40px; max-width: 720px; }
+  
+  .mesa-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0; text-align: left; }
+  .mesa-list li { position: relative; padding: 20px 0 20px 26px; border-top: 1px solid rgba(222,227,229,0.18); font-size: 15px; }
   .mesa-list li:last-child { border-bottom: 1px solid rgba(222,227,229,0.18); }
-  .mesa-list li::before {
-    content: ""; position: absolute; left: 0; top: 28px;
-    width: 14px; height: 2px; background: #d70f15;
-  }
-  .mesa-list li strong {
-    font-family: 'Clash Display Variable', 'Clash Display', sans-serif;
-    font-weight: 600; display: block; margin-bottom: 4px; font-size: 17px; color: #fff;
-  }
+  .mesa-list li::before { content: ""; position: absolute; left: 0; top: 28px; width: 14px; height: 2px; background: #d70f15; }
+  .mesa-list li strong { font-family: 'Clash Display', sans-serif; font-weight: 600; display: block; margin-bottom: 4px; font-size: 17px; color: #fff; }
 
-
-  /* PERCURSOS */
+  /* ============================================
+     PERCURSOS & MATERIAIS
+     ============================================ */
   .percursos { background: #fff; }
   .percursos .intro { color: #6e7d8c; max-width: 700px; margin-bottom: 40px; font-size: 16px; }
-  .prog-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-  .prog-card { background: #fff; border: 1px solid #dee3e5; padding: 28px; }
-  .prog-marker { width: 48px; height: 4px; background: #d70f15; margin-bottom: 18px; }
-  .prog-card h3 { font-size: 22px; margin-bottom: 8px; letter-spacing: -0.01em; }
-  .prog-card .sub { font-weight: 600; font-size: 14px; margin-bottom: 14px; color: #38383d; }
-  .prog-card .body { color: #6e7d8c; font-size: 15px; margin-bottom: 18px; }
-  .prog-card .tag { color: #d70f15; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; }
+  
+  .prog-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .prog-card { background: #fff; border: 1px solid #dee3e5; padding: 32px; }
+  .prog-marker { width: 48px; height: 4px; background: #d70f15; margin-bottom: 24px; }
+  .prog-card h3 { font-size: 24px; margin-bottom: 8px; }
+  .prog-card .sub { font-weight: 600; font-size: 14px; margin-bottom: 16px; color: #38383d; }
+  .prog-card .body { color: #6e7d8c; font-size: 15px; margin-bottom: 24px; }
+  .prog-card .tag { color: #d70f15; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
 
-  /* SHIFT Materials */
-  .materiais { margin-top: 24px; }
-  .materiais-title {
-    font-family: 'Clash Display Variable', 'Clash Display', sans-serif;
-    font-size: 14px; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.08em; color: #6e7d8c; margin-bottom: 14px;
-  }
-  .materiais-grid { display: flex; flex-direction: column; gap: 12px; }
-  .material-card {
-    display: block; background: #dee3e5; padding: 18px 20px;
-    border-left: 3px solid #d70f15;
-    transition: background 0.2s;
-  }
+  .materiais { margin-top: 32px; }
+  .materiais-title { font-family: 'Clash Display', sans-serif; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #6e7d8c; margin-bottom: 16px; }
+  .materiais-grid { display: flex; flex-direction: column; gap: 16px; }
+  
+  .material-card { display: block; background: #dee3e5; padding: 20px; border-left: 3px solid #d70f15; transition: background 0.2s; }
   .material-card:hover { background: #d4dadd; }
-  .material-card .m-title {
-    font-family: 'Clash Display Variable', 'Clash Display', sans-serif;
-    font-weight: 600; font-size: 16px; color: #38383d; margin-bottom: 4px;
-  }
+  .material-card .m-title { font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 16px; color: #38383d; margin-bottom: 4px; }
   .material-card .m-desc { font-size: 13px; color: #6e7d8c; }
 
-  /* CTA FINAL */
-  .final-cta { background: #dee3e5; text-align: center; }
-  .final-cta h2 { font-size: 28px; margin-bottom: 14px; }
-  .final-cta p { color: #6e7d8c; max-width: 640px; margin: 0 auto 28px; font-size: 16px; }
-
-  /* CONTACTO */
+  /* ============================================
+     CONTACTO & FORMULÁRIO (PADRÃO UNIVERSAL)
+     ============================================ */
   .contacto { background: #38383d; color: #fff; }
-  .contacto-grid {
-    max-width: 1100px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start;
-  }
-  .contacto h2 { font-size: 28px; margin-bottom: 16px; color: #fff; }
-  .contacto-text p { color: #dee3e5; font-size: 16px; max-width: 480px; }
-  .tally-wrap { background: #fff; padding: 12px; }
-  .tally-wrap iframe { width: 100%; border: 0; display: block; }
+  .contacto-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; }
+  .contacto h2 { font-size: 32px; margin-bottom: 16px; color: #fff; }
+  .contacto-text p { color: #dee3e5; font-size: 16px; line-height: 1.6; }
+  
+  .mf-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+  .mf-form input, .mf-form textarea { width: 100%; padding: 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: 16px; background-color: #FAFAFA; }
+  .mf-form input:focus, .mf-form textarea:focus { outline: none; border-color: #d70f15; box-shadow: 0 0 0 3px rgba(215, 15, 21, 0.1); }
+  .mf-form button { background-color: #d70f15; color: #FFFFFF; border: none; padding: 16px 24px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+  .mf-form button:hover { background-color: #b00b11; }
 
-
-  /* FOOTER */
-  footer { background: #fff; border-top: 1px solid #dee3e5; padding: 40px 20px 20px; }
-  .footer-inner {
-    max-width: 1100px; margin: 0 auto;
-    display: flex; flex-direction: column; gap: 28px;
-  }
+  /* ============================================
+     FOOTER (PADRÃO UNIVERSAL)
+     ============================================ */
+  footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
   .footer-brands { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-  .footer-brands .brand img { height: 40px; }
-  .footer-agape { display: flex; flex-direction: column; gap: 6px; }
-  .footer-agape .partner-label {
-    font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em;
-    color: #6e7d8c; font-weight: 600;
-  }
-  .footer-agape img { height: 36px; width: auto; }
-  .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
-  .footer-links a { color: #6e7d8c; font-size: 13px; }
+  .footer-brands img { height: 40px; }
+  .footer-links { display: flex; flex-direction: column; gap: 16px; }
+  .footer-links a { color: #38383d; font-size: 14px; font-weight: 500; transition: color 0.2s; }
   .footer-links a:hover { color: #d70f15; }
-  .footer-bottom { text-align: center; color: #6e7d8c; font-size: 12px; margin-top: 28px; }
-
-  /* ============================================
-     TABLET (≥ 640px)
-     ============================================ */
-  @media (min-width: 640px) {
-    .hero h1 { font-size: 42px; }
-    .section-title, .contrasts h2, .training h2, .final-cta h2, .contacto h2, .mesa h2 { font-size: 36px; }
-    .contrast-item { grid-template-columns: 120px 1fr; gap: 24px; }
-    .contrast-num { font-size: 110px; }
-    .mesa-list { grid-template-columns: 1fr 1fr 1fr; gap: 0 28px; }
-    .mesa-list li { border-top: none; border-bottom: none; padding: 8px 0 8px 26px; }
-    .mesa-list li:last-child { border-bottom: none; }
-    .mesa-list li::before { top: 16px; }
-    .materiais-grid { flex-direction: row; }
-    .material-card { flex: 1; }
-    .prog-grid { grid-template-columns: 1fr 1fr; }
-    .contacto-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
-    .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
-    .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
+  .footer-bottom { 
+    max-width: 1100px; margin: 32px auto 0; padding-top: 24px; 
+    border-top: 1px solid #dee3e5; display: flex; flex-direction: column; 
+    gap: 12px; align-items: center; justify-content: space-between; 
+    color: #6e7d8c; font-size: 13px; 
   }
-
+  .footer-bottom a { color: #6e7d8c; transition: color 0.2s; text-decoration: none; }
+  .footer-bottom a:hover { color: #d70f15; text-decoration: underline; }
 
   /* ============================================
-     DESKTOP (≥ 960px)
+     TABLET & DESKTOP (≥ 768px)
      ============================================ */
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
+    /* Nav & Geral */
     .nav-inner { padding: 12px 32px; }
     .brand img { height: 56px; }
-    .nav-links { display: flex; gap: 28px; }
-    .nav-links a { font-size: 14px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
     main { padding-top: 80px; }
     section { padding: 80px 32px; }
     .hero { padding: 120px 32px 100px; }
-    .hero h1 { font-size: 56px; }
-    .hero p { font-size: 17px; }
-    .section-title, .contrasts h2, .training h2, .final-cta h2, .contacto h2, .mesa h2 { font-size: 40px; }
     .two-col { grid-template-columns: 1fr 1fr; gap: 64px; }
-    .contrast-item { grid-template-columns: 160px 1fr; gap: 32px; padding: 36px 0; }
-    .contrast-num { font-size: 140px; }
-    .contrast-body h3 { font-size: 24px; }
-    .mesa h2 { font-size: 48px; }
-    .footer-agape img { height: 42px; }
+
+    /* Contrastes */
+    .passo-card { grid-template-columns: 120px 1fr; gap: 40px; padding: 56px 0; }
+    .passo-num { font-size: 120px; }
+
+    /* Mesa de Prova */
+    .mesa-list { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .mesa-list li { border-top: none; border-bottom: none; padding: 8px 0 8px 26px; }
+    .mesa-list li:last-child { border-bottom: none; }
+    .mesa-list li::before { top: 16px; }
+
+    /* Percursos */
+    .prog-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .materiais-grid { flex-direction: row; }
+    .material-card { flex: 1; }
+
+    /* Contacto & Footer */
+    .contacto-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+    .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
+    .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
+    .footer-links { flex-direction: row; gap: 28px; }
+    .footer-bottom { flex-direction: row; }
   }
-</style>
 </head>
 <body>
 
@@ -501,26 +466,24 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brands">
-      <a href="#top" class="brand">
-        <img src="myfriends-logo.svg" alt="MyFriends" />
-      </a>
-      <a href="https://agape.pt/" target="_blank" rel="noopener" class="footer-agape">
-        <img src="agape-logo.svg" alt="AGAPE Portugal" />
-      </a>
+      <img src="myfriends-logo.svg" alt="MyFriends" />
+      <img src="agape-logo.svg" alt="AGAPE Portugal" style="height: 32px;" />
     </div>
     <div class="footer-links">
-      <a href="#contrastes">Contrastes</a>
-      <a href="#formacao">Formação</a>
-      <a href="#percursos">Percursos</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://agape.pt/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+      <a href="index.html#contrastes">Contrastes</a>
+      <a href="cristaos.html">Cristãos</a>
+      <a href="lideres.html">Líderes</a>
+      <a href="#contacto">Contactos</a>
     </div>
   </div>
-
-  <div class="footer-bottom">© 2025 MyFriends, AGAPE Portugal</div>
+  <div class="footer-bottom">
+    <div>© 2026 MyFriends, AGAPE Portugal</div>
+    <a href="https://agape.pt/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+  </div>
 </footer>
 
   
