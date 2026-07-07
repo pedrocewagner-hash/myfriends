@@ -259,16 +259,16 @@
     <!-- Aura Vermelha (Rot oficial) na esquerda -->
     <div style="position: absolute; top: -100px; left: -100px; width: 500px; height: 500px; background: rgba(215, 15, 21, 0.28); border-radius: 50%; filter: blur(90px); z-index: 0; pointer-events: none;"></div>
     
-    <!-- Caixa principal com "fit-content" para alinhar o texto milimetricamente à direita -->
-    <div style="position: relative; z-index: 2; width: fit-content; margin-left: auto; margin-right: 0; display: flex; flex-direction: column; align-items: flex-end;">
+    <!-- Caixa principal simples (sem flexbox) -->
+    <div style="position: relative; z-index: 2; width: 100%; max-width: 900px; margin-left: auto; margin-right: 0;">
       
-      <!-- Subtítulo (Montserrat) encostado com precisão -->
-      <p style="font-family: 'Montserrat', sans-serif; font-size: clamp(15px, 2vw, 18px); font-weight: 500; color: #d70f15; margin-bottom: 24px; line-height: 1.6; margin-top: 0; text-align: right; max-width: clamp(280px, 50vw, 550px);">
+      <!-- Subtítulo: margin-left: auto empurra-o sempre para a direita -->
+      <p style="font-family: 'Montserrat', sans-serif; font-size: clamp(15px, 2vw, 18px); font-weight: 500; color: #d70f15; line-height: 1.6; text-align: right; margin: 0 0 24px auto; padding: 0; max-width: 550px; display: block;">
         Imagina viver a missão de Jesus com simplicidade, onde as pessoas vivem, trabalham e se cruzam.
       </p>
       
-      <!-- Título (Clash Display) -->
-      <h1 style="font-family: 'Clash Display', sans-serif; font-size: clamp(42px, 8vw, 86px); font-weight: 600; color: #38383d; line-height: 0.95; text-transform: uppercase; margin: 0; text-align: right;">
+      <!-- Título: text-align e margens forçam o alinhamento total -->
+      <h1 style="font-family: 'Clash Display', sans-serif; font-size: clamp(42px, 8vw, 86px); font-weight: 600; color: #38383d; line-height: 0.95; text-transform: uppercase; text-align: right; margin: 0 0 0 auto; padding: 0; display: block;">
         Multiplicar<br>
         discípulos.<br>
         Construir<br>
