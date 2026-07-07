@@ -65,21 +65,38 @@
   }
   .btn-passo:hover { background: #d70f15; }
 
-  /* FOOTER */
-  footer { background: #fff; border-top: 1px solid #dee3e5; padding: 40px 20px 20px; }
-  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
-  .footer-brands { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  /* ============================================
+     FOOTER (MOBILE: SEM LINKS)
+     ============================================ */
+  footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; align-items: center; }
+  .footer-brands { display: flex; flex-direction: column; gap: 20px; align-items: center; }
   .footer-brands img { height: 40px; }
-  .footer-agape .partner-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: #6e7d8c; font-weight: 600; }
-  .footer-bottom { text-align: center; color: #6e7d8c; font-size: 12px; margin-top: 28px; }
+  
+  /* ESCONDE OS LINKS NO TELEMÓVEL */
+  .footer-links { display: none; } 
+  .footer-links a { color: #38383d; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .footer-links a:hover { color: #d70f15; }
+
+  .footer-bottom { 
+    max-width: 1100px; margin: 32px auto 0; padding-top: 24px; 
+    border-top: 1px solid #dee3e5; display: flex; flex-direction: column; 
+    gap: 12px; align-items: center; justify-content: space-between; 
+    color: #6e7d8c; font-size: 13px; text-align: center;
+  }
+  .footer-bottom a { color: #6e7d8c; transition: color 0.2s; text-decoration: none; }
+  .footer-bottom a:hover { color: #d70f15; text-decoration: underline; }
 
   @media (min-width: 768px) {
     .nav-links { display: flex; gap: 28px; align-items: center; }
     main { padding-top: 80px; }
     .passo-card { grid-template-columns: 120px 1fr; gap: 40px; padding: 56px 0; }
     .passo-num { font-size: 120px; }
-    .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    /* VOLTA A MOSTRAR OS LINKS NO COMPUTADOR */
+    .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
     .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
+    .footer-links { display: flex; flex-direction: row; gap: 28px; }
+    .footer-bottom { flex-direction: row; text-align: left; }
   }
 </style>
 </head>
@@ -185,16 +202,24 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brands">
       <img src="myfriends-logo.svg" alt="MyFriends" />
-      <div class="footer-agape">
-        <img src="agape-logo.svg" alt="AGAPE Portugal" />
-      </div>
+      <img src="agape-logo.svg" alt="AGAPE Portugal" style="height: 32px;" />
     </div>
+    <div class="footer-links">
+      <a href="index.html#contrastes">Contrastes</a>
+      <a href="cristaos.html">Cristãos</a>
+      <a href="lideres.html">Líderes</a>
+      <a href="#contacto">Contactos</a>
+    </div>
+  </div> 
+  <div class="footer-bottom">
+    <div>© 2026 MyFriends, AGAPE Portugal</div>
+    <a href="https://agape.pt/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
   </div>
-  <div class="footer-bottom">© 2026 MyFriends, AGAPE Portugal</div>
 </footer>
 
 </body>
