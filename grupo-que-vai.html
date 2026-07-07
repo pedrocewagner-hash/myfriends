@@ -108,6 +108,8 @@
   .footer-bottom a:hover { color: #d70f15; text-decoration: underline; }
 
   @media (min-width: 768px) {
+    main { padding-top: 80px; }
+    .contacto-grid { grid-template-columns: 1fr 1fr; gap: 64px; } /* Isto força as 2 colunas */
     .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
     .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
     .footer-links { flex-direction: row; gap: 28px; }
@@ -127,7 +129,7 @@
       <a href="index.html#contrastes">Contrastes</a>
       <a href="cristaos.html">Cristãos</a>
       <a href="lideres.html">Líderes</a>
-      <a href="#contacto" class="btn-nav">Contactos</a>
+      <a href="#contacto">Contactos</a>
     </div>
   </div>
 </nav>
