@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyFriends | Percurso para Cristãos</title>
+<meta name="description" content="Aprende a fazer discípulos no teu dia a dia. Descobre a jornada prática para viver a missão de Jesus com os teus amigos e família.">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* CSS Base herdado da página principal */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Montserrat', sans-serif; font-weight: 400;
+    background: #FFFFFF; color: #38383d; line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* NAV */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: #FFFFFF; border-bottom: 1px solid #dee3e5; z-index: 100;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto; padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand img { height: 44px; width: auto; }
+  .nav-links { display: none; gap: 14px; }
+  .nav-links a { color: #38383d; font-size: 13px; font-weight: 500; }
+  .nav-links a:hover { color: #d70f15; }
+  .btn-nav { background: #dee3e5; padding: 8px 16px; border-radius: 4px; transition: background 0.2s; }
+  .btn-nav:hover { background: #d4dadd; }
+
+  main { padding-top: 68px; }
+
+  /* GERAL */
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  .tag { color: #d70f15; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; display: block; }
+
+  /* HERO CRISTÃOS */
+  .hero-page { padding: 100px 20px 80px; background-color: #dee3e5; text-align: center; }
+  .hero-page h1 { font-size: clamp(36px, 6vw, 64px); max-width: 900px; margin: 0 auto 24px; text-transform: uppercase; }
+  .hero-page p { font-size: clamp(16px, 2vw, 18px); color: #6e7d8c; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+  /* PASSOS / JORNADA */
+  .jornada { padding: 80px 0; background: #fff; }
+  .passo-card {
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+    padding: 40px 0; border-top: 1px solid #dee3e5;
+  }
+  .passo-card:last-child { border-bottom: 1px solid #dee3e5; }
+  .passo-num { font-family: 'Clash Display', sans-serif; font-size: 80px; line-height: 0.8; color: #dee3e5; }
+  .passo-content h2 { font-size: 32px; margin-bottom: 12px; }
+  .passo-content .sub { font-weight: 600; font-size: 16px; color: #38383d; margin-bottom: 16px; }
+  .passo-content p { color: #6e7d8c; font-size: 16px; margin-bottom: 24px; max-width: 600px; }
+  .btn-passo {
+    display: inline-block; background: #38383d; color: #fff;
+    font-weight: 600; font-size: 15px; padding: 14px 28px;
+    transition: background 0.3s;
+  }
+  .btn-passo:hover { background: #d70f15; }
+
+  /* FOOTER */
+  footer { background: #fff; border-top: 1px solid #dee3e5; padding: 40px 20px 20px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .footer-brands { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  .footer-brands img { height: 40px; }
+  .footer-agape .partner-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: #6e7d8c; font-weight: 600; }
+  .footer-bottom { text-align: center; color: #6e7d8c; font-size: 12px; margin-top: 28px; }
+
+  @media (min-width: 768px) {
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    main { padding-top: 80px; }
+    .passo-card { grid-template-columns: 120px 1fr; gap: 40px; padding: 56px 0; }
+    .passo-num { font-size: 120px; }
+    .footer-inner { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+    .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <!-- Lembra-te de ter o myfriends-logo.svg na mesma pasta -->
+      <img src="myfriends-logo.svg" alt="MyFriends" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html">← Voltar ao Início</a>
+      <a href="lideres.html" class="btn-nav">És Líder?</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero-page">
+    <div class="container">
+      <span class="tag">Percurso para Cristãos</span>
+      <h1>A missão não se improvisa. Treina-se.</h1>
+      <p>A intenção de fazer discípulos não sobrevive à rotina do dia a dia sem intencionalidade. A força de vontade acaba por falhar, por isso precisas de um ambiente e de um sistema. Descobre como viver a fé de forma orgânica e criar hábitos num grupo focado em partilhar a vida e multiplicar discípulos.</p>
+    </div>
+  </section>
+
+  <!-- JORNADA / PASSOS -->
+  <section class="jornada">
+    <div class="container">
+      
+      <!-- PASSO 1 -->
+      <div class="passo-card">
+        <div class="passo-num">1</div>
+        <div class="passo-content">
+          <span class="tag">Online • 6 a 8 semanas</span>
+          <h2>Grupo que VAI!</h2>
+          <div class="sub">O teu ponto de partida na prática.</div>
+          <p>O primeiro passo para desafiares outros. Uma ferramenta prática para cristãos que já fazem discípulos ajudarem novos amigos a iniciar a jornada de "pescar pessoas". Não precisas de saber tudo, precisas apenas de começar.</p>
+          <a href="grupo-que-vai.html" class="btn-passo">Descobre o Grupo que VAI!</a>
+        </div>
+      </div>
+
+      <!-- PASSO 2 -->
+      <div class="passo-card">
+        <div class="passo-num">2</div>
+        <div class="passo-content">
+          <span class="tag">3 FDS • Grupo Semanal</span>
+          <h2>Formação MyFriends</h2>
+          <div class="sub">Fazer discípulos como estilo de vida.</div>
+          <p>É aqui que ganhas estofo. Aprende a integrar o exemplo de Jesus na tua rotina e nas tuas conversas naturais, vivendo a fé de forma orgânica. Tudo acontece num grupo de estilo de vida, onde partilhas o processo, as falhas e as histórias ao longo do caminho.</p>
+          <a href="#contacto" class="btn-passo">Fala connosco sobre as próximas vagas</a>
+        </div>
+      </div>
+
+      <!-- PASSO 3 -->
+      <div class="passo-card">
+        <div class="passo-num">3</div>
+        <div class="passo-content">
+          <span class="tag">Online • 8 Semanas</span>
+          <h2>ITGM</h2>
+          <div class="sub">Missão urbana em equipa e comunidade.</div>
+          <p>Para quem quer ir *full in*. Um espaço focado em pensar o discipulado de forma tática na cidade e formar equipas intencionais. Uma jornada avançada (Invitation to God Movements) para equipas que querem multiplicar discípulos.</p>
+          <a href="#contacto" class="btn-passo">Quero saber mais sobre o ITGM</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCAO CONTACTO SIMPLIFICADA (Para usar o formulário que já tens) -->
+  <section id="contacto" style="background-color: #38383d; padding: 80px 20px;">
+    <div class="container" style="max-width: 600px; text-align: center;">
+      <h2 style="color: #fff; margin-bottom: 24px; font-size: 32px;">Estás pronto para começar?</h2>
+      <p style="color: #dee3e5; margin-bottom: 40px;">Preenche o formulário para entrares na próxima turma de Formação MyFriends ou para saberes mais detalhes sobre o ITGM.</p>
+      
+      <!-- O teu formulário original -->
+      <style>
+        .mf-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+        .mf-form input, .mf-form textarea { width: 100%; padding: 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: 16px; background-color: #FAFAFA; box-sizing: border-box; }
+        .mf-form input:focus, .mf-form textarea:focus { outline: none; border-color: #d70f15; box-shadow: 0 0 0 3px rgba(215, 15, 21, 0.1); }
+        .mf-form button { background-color: #d70f15; color: #FFFFFF; border: none; padding: 16px 24px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+        .mf-form button:hover { background-color: #b00b11; }
+      </style>
+      <form class="mf-form" action="https://formspree.io/f/xbdvqldb" method="POST">
+        <input type="text" name="Nome" placeholder="O teu nome" required>
+        <input type="email" name="Email" placeholder="O teu email" required>
+        <textarea name="Mensagem" rows="5" placeholder="Diz-nos em qual dos percursos tens interesse..." required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brands">
+      <img src="myfriends-logo.svg" alt="MyFriends" />
+      <div class="footer-agape">
+        <span class="partner-label">Iniciativa de</span>
+        <img src="agape-logo.svg" alt="AGAPE Portugal" />
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 MyFriends, AGAPE Portugal</div>
+</footer>
+
+</body>
+</html>
