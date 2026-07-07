@@ -282,9 +282,49 @@
 
 
 
+  <!-- ADICIONA ESTE ESTILO PARA GARANTIR QUE OS NÚMEROS FICAM GIGANTES -->
+  <style>
+    .passo-card {
+      display: grid; 
+      grid-template-columns: 1fr; 
+      gap: 24px;
+      padding: 40px 0; 
+      border-top: 1px solid #dee3e5;
+    }
+    .passo-card:last-child { border-bottom: 1px solid #dee3e5; }
+    
+    .passo-num { 
+      font-family: 'Clash Display', sans-serif; 
+      font-size: 80px; /* Tamanho grande mas adequado para Mobile */
+      line-height: 0.8; 
+      color: #dee3e5; 
+    }
+    
+    .passo-content h3 {
+      font-family: 'Clash Display', sans-serif;
+      color: #d70f15; 
+      font-size: clamp(32px, 4vw, 40px); 
+      text-transform: uppercase; 
+      letter-spacing: 0.05em; 
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+  
+    @media (min-width: 768px) {
+      .passo-card { 
+        grid-template-columns: 120px 1fr; /* Força o número a ir para a margem esquerda no PC */
+        gap: 40px; 
+        padding: 56px 0; 
+      }
+      .passo-num { 
+        font-size: 120px; /* Tamanho GIGANTE para Desktop */
+      }
+    }
+  </style>
+  
   <!-- TRANSIÇÃO -->
   <section style="padding: 100px 20px 40px; background-color: #ffffff; text-align: center;">
-    <div class="container" style="max-width: 900px;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
       <h2 style="font-family: 'Clash Display', sans-serif; font-size: clamp(32px, 5vw, 48px); font-weight: 600; color: #38383d; line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance;">
         O mundo mudou.<br>A nossa forma de fazer missão também precisa de mudar.
       </h2>
@@ -292,22 +332,20 @@
   </section>
   
   <!-- CONTRASTES -->
-  <section id="contrastes" class="jornada" style="padding-top: 0;">
-    <div class="container">
+  <section id="contrastes" style="padding: 0 20px 100px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
       
       <!-- 1. EXPERIÊNCIA -->
       <div class="passo-card">
         <div class="passo-num">1</div>
         <div class="passo-content">
-          <h2 style="color: #d70f15; font-size: clamp(32px, 4vw, 40px); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">
-            EXPERIÊNCIA
-          </h2>
+          <h3>EXPERIÊNCIA</h3>
           
-          <p style="margin-bottom: 16px;">A nossa cultura tem acesso a toda a informação do mundo, mas está carente de verdade autêntica. Hoje, as pessoas já não são convencidas apenas por argumentos lógicos ou doutrina; elas precisam de vivenciar o Evangelho.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 16px; line-height: 1.6;">A nossa cultura tem acesso a toda a informação do mundo, mas está carente de verdade autêntica. Hoje, as pessoas já não são convencidas apenas por argumentos lógicos ou doutrina; elas precisam de vivenciar o Evangelho.</p>
           
-          <p style="margin-bottom: 24px;">O amor de Jesus tem de ser visto e provado através das nossas vidas, num movimento onde a partilha da mensagem flui naturalmente a partir dessa mesma experiência.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 24px; line-height: 1.6;">O amor de Jesus tem de ser visto e provado através das nossas vidas, num movimento onde a partilha da mensagem flui naturalmente a partir dessa mesma experiência.</p>
           
-          <p style="color: #38383d; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, a experiência comunica mais do que a informação.</p>
+          <p style="color: #38383d; font-size: 16px; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, a experiência comunica mais do que a informação.</p>
         </div>
       </div>
   
@@ -315,15 +353,13 @@
       <div class="passo-card">
         <div class="passo-num">2</div>
         <div class="passo-content">
-          <h2 style="color: #d70f15; font-size: clamp(32px, 4vw, 40px); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">
-            AFINIDADES
-          </h2>
+          <h3>AFINIDADES</h3>
           
-          <p style="margin-bottom: 16px;">Nas cidades modernas, o conceito de comunidade mudou. A verdadeira família já não é apenas a biológica, mas sim a "família escolhida": os amigos, os colegas de trabalho e as tribos urbanas unidas por paixões comuns.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 16px; line-height: 1.6;">Nas cidades modernas, o conceito de comunidade mudou. A verdadeira família já não é apenas a biológica, mas sim a "família escolhida": os amigos, os colegas de trabalho e as tribos urbanas unidas por paixões comuns.</p>
           
-          <p style="margin-bottom: 24px;">É precisamente nestas redes naturais de relacionamento, vivendo e partilhando o dia a dia, que o processo de formar discípulos ganha raízes sólidas.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 24px; line-height: 1.6;">É precisamente nestas redes naturais de relacionamento, vivendo e partilhando o dia a dia, que o processo de formar discípulos ganha raízes sólidas.</p>
           
-          <p style="color: #38383d; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, somos mais influenciados pelas afinidades do que por laços de sangue.</p>
+          <p style="color: #38383d; font-size: 16px; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, somos mais influenciados pelas afinidades do que por laços de sangue.</p>
         </div>
       </div>
   
@@ -331,15 +367,13 @@
       <div class="passo-card">
         <div class="passo-num">3</div>
         <div class="passo-content">
-          <h2 style="color: #d70f15; font-size: clamp(32px, 4vw, 40px); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">
-            FRAGILIDADE
-          </h2>
+          <h3>FRAGILIDADE</h3>
           
-          <p style="margin-bottom: 16px;">A sociedade pós-cristã não acorda de manhã a pensar que está "perdida". No entanto, as pessoas sentem-se profundamente quebradas, ansiosas e exaustas pela performance constante que o mundo exige.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 16px; line-height: 1.6;">A sociedade pós-cristã não acorda de manhã a pensar que está "perdida". No entanto, as pessoas sentem-se profundamente quebradas, ansiosas e exaustas pela performance constante que o mundo exige.</p>
           
-          <p style="margin-bottom: 24px;">Jesus encontrava as pessoas na sua fragilidade e nós somos chamados a fazer o mesmo. Entender a própria perdição requer tempo e o contexto seguro de uma amizade genuína.</p>
+          <p style="color: #6e7d8c; font-size: 16px; margin-bottom: 24px; line-height: 1.6;">Jesus encontrava as pessoas na sua fragilidade e nós somos chamados a fazer o mesmo. Entender a própria perdição requer tempo e o contexto seguro de uma amizade genuína.</p>
           
-          <p style="color: #38383d; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, a fragilidade é compreendida primeiro e a perdição depois.</p>
+          <p style="color: #38383d; font-size: 16px; font-weight: 700; margin-bottom: 0;">&rarr; Hoje, a fragilidade é compreendida primeiro e a perdição depois.</p>
         </div>
       </div>
   
