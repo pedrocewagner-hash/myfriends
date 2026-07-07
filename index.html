@@ -256,20 +256,17 @@
 
   <section class="hero" style="position: relative; overflow: hidden; padding-top: clamp(80px, 15vw, 180px); padding-bottom: 60px; padding-left: 20px; padding-right: clamp(20px, 8vw, 120px);">
   
-    <!-- Aura Vermelha Responsiva: Recolhe-se no telemóvel e expande no PC -->
-    <div style="position: absolute; top: clamp(-150px, -15vw, -80px); left: clamp(-150px, -15vw, -80px); width: clamp(200px, 40vw, 500px); height: clamp(200px, 40vw, 500px); background: rgba(215, 15, 21, 0.22); border-radius: 50%; filter: blur(clamp(40px, 6vw, 90px)); z-index: 0; pointer-events: none;"></div>
+    <!-- Aura Vermelha: De volta ao tamanho grande original -->
+    <div style="position: absolute; top: -100px; left: -100px; width: 500px; height: 500px; background: rgba(215, 15, 21, 0.28); border-radius: 50%; filter: blur(90px); z-index: 0; pointer-events: none;"></div>
     
-    <!-- Caixa principal simples (sem flexbox) -->
     <div style="position: relative; z-index: 2; width: 100%; max-width: 900px; margin-left: auto; margin-right: 0;">
       
-      <!-- Subtítulo: Kohlegrau (#38383d) para leitura perfeita em ponto pequeno -->
-      <div style="margin: 0 0 24px auto; padding-right: 16px; border-right: 3px solid #d70f15; max-width: 550px;">
-        <p style="font-family: 'Montserrat', sans-serif; font-size: clamp(14px, 2vw, 16px); font-weight: 500; color: #38383d; line-height: 1.6; text-align: right; margin: 0; padding: 0; display: block;">
-          Imagina viver a missão de Jesus com simplicidade, onde as pessoas vivem, trabalham e se cruzam.
-        </p>
-      </div>
+      <!-- Subtítulo: Sem borda vermelha, texto regular (font-weight: 400) para máxima leveza e leitura limpa em Kohlegrau (#38383d) -->
+      <p style="font-family: 'Montserrat', sans-serif; font-size: clamp(14px, 2vw, 16px); font-weight: 400; color: #38383d; line-height: 1.6; text-align: right; margin: 0 0 24px auto; padding: 0; max-width: 550px; display: block;">
+        Imagina viver a missão de Jesus com simplicidade, onde as pessoas vivem, trabalham e se cruzam.
+      </p>
       
-      <!-- Título: Blaugrau (#6e7d8c) para retirar a agressividade, mantendo a presença -->
+      <!-- Título: Blaugrau (#6e7d8c) para manter o tom pacífico e não agressivo -->
       <h1 style="font-family: 'Clash Display', sans-serif; font-size: clamp(42px, 8vw, 86px); font-weight: 600; color: #6e7d8c; line-height: 0.95; text-transform: uppercase; text-align: right; margin: 0 0 0 auto; padding: 0; display: block;">
         Multiplicar<br>
         discípulos.<br>
