@@ -20,7 +20,10 @@
      MOBILE-FIRST CSS
      ============================================ */
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; /* Compensa a altura do menu fixo */
+  }
   body {
     font-family: 'Montserrat', sans-serif; font-weight: 400;
     background: #FFFFFF;
@@ -239,15 +242,14 @@
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="#top" class="brand">
+    <a href="index.html" class="brand">
       <img src="myfriends-logo.svg" alt="MyFriends" />
     </a>
     <div class="nav-links">
       <a href="#contrastes">Contrastes</a>
-
-      <a href="#formacao">Formação</a>
-      <a href="#percursos">Percursos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="cristaos.html">Cristãos</a>
+      <a href="lideres.html">Líderes</a>
+      <a href="#contacto" class="btn-nav">Contactos</a>
     </div>
   </div>
 </nav>
