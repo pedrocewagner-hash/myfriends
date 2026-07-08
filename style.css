@@ -1,0 +1,116 @@
+/* ============================================
+   BASE & MOBILE-FIRST
+   ============================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Montserrat', sans-serif; font-weight: 400;
+  background: #FFFFFF; color: #38383d; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: 'Clash Display', sans-serif; font-weight: 600; line-height: 1.2; color: #38383d; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   NAVEGAÇÃO
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: #FFFFFF; border-bottom: 1px solid #dee3e5; z-index: 100;
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 10px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.brand img { height: 44px; width: auto; }
+
+.mobile-recursos-btn {
+  display: block; background-color: #fee2e2; color: #d70f15;
+  font-size: 13px; font-weight: 700; padding: 8px 16px;
+  border-radius: 6px; text-decoration: none; transition: background 0.2s;
+  margin-left: auto;
+}
+
+.nav-links { display: none; gap: 14px; }
+.nav-links a { color: #38383d; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: #d70f15; }
+.btn-nav { background: #dee3e5; padding: 8px 16px; border-radius: 4px; transition: background 0.2s; }
+.btn-nav:hover { background: #d4dadd; }
+
+/* ============================================
+   ESTRUTURA E BOTÕES
+   ============================================ */
+main { padding-top: 64px; }
+section { padding: 64px 20px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.tag { color: #d70f15; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; display: block; }
+
+.btn-primary, .btn-secondary {
+  display: inline-block; font-family: 'Montserrat', sans-serif;
+  font-weight: 600; font-size: 16px; padding: 16px 32px;
+  border-radius: 8px; cursor: pointer; transition: background 0.3s; text-align: center; border: none; text-decoration: none;
+}
+.btn-primary { background: #d70f15; color: #fff; }
+.btn-primary:hover { background: #b00b11; }
+.btn-secondary { background: #38383d; color: #fff; }
+.btn-secondary:hover { background: #1a1a1c; }
+
+/* ============================================
+   CTA FINAL (PRÓXIMOS PASSOS)
+   ============================================ */
+.final-cta { background-color: #f7f9fa; text-align: center; border-top: 1px solid #dee3e5; padding: 80px 20px; }
+.final-cta h2 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 20px; }
+.final-cta p { color: #6e7d8c; max-width: 700px; margin: 0 auto 32px; font-size: clamp(16px, 2vw, 18px); line-height: 1.6; text-wrap: balance; }
+.ctas { display: flex; flex-direction: column; gap: 16px; align-items: center; justify-content: center; }
+
+/* ============================================
+   CONTACTO & FORMULÁRIO
+   ============================================ */
+.contacto { background: #38383d; color: #fff; }
+.contacto-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: start; }
+.contacto h2 { font-size: 32px; margin-bottom: 16px; color: #fff; }
+.contacto-text p { color: #dee3e5; font-size: 16px; line-height: 1.6; }
+
+.mf-form { display: flex; flex-direction: column; gap: 16px; text-align: left; width: 100%; }
+.mf-form input, .mf-form textarea { width: 100%; padding: 16px; border: 1px solid #E5E7EB; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: 16px; background-color: #FAFAFA; box-sizing: border-box; transition: all 0.3s ease; }
+.mf-form input:focus, .mf-form textarea:focus { outline: none; border-color: #d70f15; box-shadow: 0 0 0 3px rgba(215, 15, 21, 0.1); background-color: #fff; }
+.mf-form button { background-color: #d70f15; color: #FFFFFF; border: none; padding: 16px 24px; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease; }
+.mf-form button:hover { background-color: #b00b11; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24px; }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; align-items: center; }
+.footer-brands { display: flex; flex-direction: column; gap: 20px; align-items: center; }
+.footer-brands img { height: 40px; }
+
+.footer-links { display: none; } 
+.footer-links a { color: #38383d; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.footer-links a:hover { color: #d70f15; }
+
+.footer-bottom { max-width: 1100px; margin: 32px auto 0; padding-top: 24px; border-top: 1px solid #dee3e5; display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: space-between; color: #6e7d8c; font-size: 13px; text-align: center; }
+.footer-bottom a { color: #6e7d8c; transition: color 0.2s; }
+.footer-bottom a:hover { color: #d70f15; text-decoration: underline; }
+
+/* ============================================
+   TABLET & DESKTOP (≥ 768px)
+   ============================================ */
+@media (min-width: 768px) {
+  .mobile-recursos-btn { display: none; }
+  .nav-inner { padding: 12px 32px; }
+  .brand img { height: 56px; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  
+  main { padding-top: 80px; }
+  section { padding: 80px 32px; }
+  .ctas { flex-direction: row; }
+  
+  .contacto-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+  
+  .footer-inner { flex-direction: row; justify-content: space-between; align-items: center; }
+  .footer-brands { flex-direction: row; align-items: center; gap: 32px; }
+  .footer-links { display: flex; flex-direction: row; gap: 28px; }
+  .footer-bottom { flex-direction: row; text-align: left; }
+}
