@@ -175,3 +175,33 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 .hero-link-text:hover { 
   color: #b00b11; 
 }
+
+/* ============================================
+   BOTÕES DE FILTRO (PÁGINA DE RECURSOS)
+   ============================================ */
+.btn-filtro {
+  background-color: #dee3e5;       /* O cinza claro do teu site */
+  color: #6e7d8c;                  /* Texto mais suave enquanto não está selecionado */
+  border: none;
+  border-radius: 30px;             /* Formato de pílula arredondada */
+  padding: 12px 28px;              /* Tamanho ideal para o clique do dedo no telemóvel */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;       /* Transição suave ao clicar ou passar o rato */
+  outline: none;
+}
+
+/* Efeito ao passar o rato (Desktop) */
+.btn-filtro:hover {
+  background-color: #d4dadd;
+  color: #38383d;                  /* Escurece o texto e o fundo ligeiramente */
+}
+
+/* Estado Ativo (O botão que está selecionado fica vermelho MyFriends) */
+.btn-filtro.ativo {
+  background-color: #d70f15;       /* Vermelho oficial */
+  color: #ffffff;                  /* Texto branco para contraste perfeito */
+  box-shadow: 0 4px 12px rgba(215, 15, 21, 0.2); /* Sombra vermelha brilhante subtil */
+}
