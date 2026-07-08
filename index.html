@@ -42,9 +42,8 @@
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
   }
   .brand img { height: 44px; width: auto; }
-  .nav-links { display: none; gap: 14px; }
-  .nav-links a { color: #38383d; font-size: 13px; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: #d70f15; }
+  
+  /* NOVO: BOTÃO RECURSOS MOBILE */
   .mobile-recursos-btn {
     display: block;
     background-color: #fee2e2;
@@ -55,7 +54,12 @@
     border-radius: 6px;
     text-decoration: none;
     transition: background 0.2s;
+    margin-left: auto; /* Garante que encosta à direita */
   }
+
+  .nav-links { display: none; gap: 14px; }
+  .nav-links a { color: #38383d; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: #d70f15; }
 
   /* ============================================
      ESTRUTURA E GRELHAS GERAIS
@@ -207,6 +211,7 @@
      TABLET & DESKTOP (≥ 768px)
      ============================================ */
   @media (min-width: 768px) {
+    .mobile-recursos-btn { display: none; }
     /* Nav & Geral */
     .nav-inner { padding: 12px 32px; }
     .brand img { height: 56px; }
