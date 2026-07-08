@@ -57,6 +57,14 @@ section { padding: 64px 20px; }
 .btn-secondary:hover { background: #1a1a1c; }
 
 /* ============================================
+   HERO (INÍCIO & PÁGINAS)
+   ============================================ */
+.hero, .hero-page { background-color: #dee3e5; text-align: center; }
+.hero-page { padding: 100px 20px 80px; }
+.hero-page h1 { font-size: clamp(36px, 6vw, 68px); max-width: 900px; margin: 0 auto 24px; text-transform: uppercase; letter-spacing: -0.02em; }
+.hero-page p { font-size: clamp(16px, 2vw, 18px); color: #6e7d8c; max-width: 720px; margin: 0 auto; line-height: 1.6; text-wrap: balance; }
+
+/* ============================================
    CTA FINAL (PRÓXIMOS PASSOS)
    ============================================ */
 .final-cta { background-color: #f7f9fa; text-align: center; border-top: 1px solid #dee3e5; padding: 80px 20px; }
