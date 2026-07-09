@@ -211,3 +211,25 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   .footer-links { display: flex; flex-direction: row; gap: 28px; }
   .footer-bottom { flex-direction: row; text-align: left; }
 }
+
+/* ============================================
+   CONTACTO SIMPLIFICADO (Páginas Internas)
+   ============================================ */
+.contacto-simples {
+  background-color: #38383d;
+  padding: 80px 20px;
+}
+.contacto-simples .form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contacto-simples h2 {
+  color: #ffffff;
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+.contacto-simples p {
+  color: #dee3e5;
+  margin-bottom: 40px;
+}
