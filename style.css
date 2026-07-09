@@ -107,11 +107,20 @@ section { padding: 64px 20px; }
 }
 .passo-content p { color: #6e7d8c; font-size: 16px; margin-bottom: 24px; line-height: 1.6; }
 .btn-passo {
-  display: inline-block; color: #d70f15; font-weight: 600; 
-  font-size: 15px; text-decoration: underline; text-underline-offset: 4px;
+  display: inline-block; 
+  color: #d70f15; 
+  border: 2px solid #d70f15; 
+  padding: 12px 24px; 
+  border-radius: 8px;
+  font-weight: 600; 
+  font-size: 15px; 
+  text-decoration: none; 
+  transition: all 0.3s ease;
 }
-.btn-passo:hover { color: #b00b11; }
-
+.btn-passo:hover { 
+  background-color: #d70f15; 
+  color: #ffffff; 
+}
 @media (min-width: 768px) {
   .passo-card { grid-template-columns: 120px 1fr; gap: 40px; padding: 56px 0; }
   .passo-num { font-size: 120px; }
