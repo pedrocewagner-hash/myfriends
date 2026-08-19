@@ -53,6 +53,114 @@
       line-height: 1.1;
     }
     .landing-content h1 span {
+      color: #d70f15;
+    }
+    
+    .landing-content p.intro-text {
+      color: #6e7d8c;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* CAIXA DE COACHING (NOVO) */
+    .coaching-box {
+      background-color: #f7f9fa;
+      border-left: 4px solid #d70f15;
+      border-radius: 0 8px 8px 0;
+      padding: 25px 20px;
+      margin-top: 40px;
+      text-align: left;
+    }
+    .coaching-box h3 {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 20px;
+      color: #38383d;
+      margin-bottom: 10px;
+    }
+    .coaching-box p {
+      font-size: 14px;
+      color: #6e7d8c;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    /* Botão Secundário (Apenas contorno, para não ofuscar o vermelho principal) */
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 14px;
+      background-color: transparent;
+      color: #38383d;
+      border: 2px solid #38383d;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+    .btn-secondary:hover {
+      background-color: #38383d;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="landing-wrapper">
+    <!-- Logotipo que regressa ao site principal -->
+    <header class="landing-header">
+      <a href="index.html">
+        <img src="myfriends-logo.svg" alt="MyFriends">
+      </a>
+    </header>
+
+    <!-- Caixa Branca Central -->
+    <main class="landing-content">
+      <h1>Inscrição <span>Confirmada!</span></h1>
+      <p class="intro-text">Bem-vindo à comunidade. Como prometido, aqui está o teu guia completo para começares o percurso prático com o teu grupo.</p>
+      
+      <!-- O LINK PARA O TEU PDF FICA AQUI (Botão Principal) -->
+      <a href="https://drive.google.com/file/d/1TvFjOyexWEZo78TR4Gvaxrp7V1ypUIX6/view?usp=drive_link" target="_blank" rel="noopener" class="btn-primary" style="display: block; width: 100%; padding: 18px; font-size: 16px;">Descarregar Guia (PDF)</a>
+      
+      <!-- CAIXA DE CONVITE PARA COACHING (NOVA) -->
+      <div class="coaching-box">
+        <h3>Vais iniciar o Grupo que VAI?</h3>
+        <p>Encorajamos-te vivamente a contactar-nos! O nosso acompanhamento (coaching) durante estas 8 semanas faz toda a diferença para a tua experiência e para a implementação prática deste estilo de vida.</p>
+        
+        <!-- Botão Secundário que leva ao formulário do site principal -->
+        <a href="index.html#contacto" class="btn-secondary">Pedir Acompanhamento</a>
+      </div>
+
+      <!-- Link discreto para voltar ao site -->
+      <p style="margin-top: 30px; margin-bottom: 0; font-size: 14px; text-align: center;">
+        <a href="index.html" style="color: #6e7d8c; text-decoration: underline;">Voltar à página principal</a>
+      </p>
+    </main>
+  </div>
+
+</body>
+</html>    }
+    .landing-content {
+      background: #ffffff;
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    /* Celebração visual no título */
+    .landing-content h1 {
+      font-family: 'Clash Display', sans-serif;
+      color: #38383d;
+      font-size: 36px;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+    .landing-content h1 span {
       color: #d70f15; /* Vermelho MyFriends para destacar a palavra principal */
     }
     
