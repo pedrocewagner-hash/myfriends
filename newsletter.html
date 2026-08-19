@@ -67,6 +67,7 @@
       font-size: 16px;
       background-color: #ffffff;
       color: #38383d;
+      box-sizing: border-box;
     }
     select.form-input:invalid {
       color: #6e7d8c;
@@ -84,7 +85,7 @@
       margin-top: 4px;
       margin-right: 12px;
       transform: scale(1.2);
-      accent-color: #d70f15; /* Pinta a caixa de vermelho quando selecionada */
+      accent-color: #d70f15; 
       cursor: pointer;
     }
     .rgpd-wrapper label {
@@ -107,44 +108,48 @@
 
     <!-- Caixa Branca Central -->
     <main class="landing-content">
-      <h1>MyFriends</h1>
+      <h1>Ferramentas Práticas</h1>
       <p>Subscreve para receberes recursos, convites e o PDF do <strong>Grupo que VAI!</strong> diretamente na tua caixa de entrada.</p>
       
-      <!-- O Formulário Limpo com Dropdowns e RGPD -->
-      <form action="LINK_DO_MAILCHIMP_DA_SKYLAR" method="post" target="_blank">
+      <!-- O Formulário Totalmente Integrado com o Mailchimp -->
+      <form action="https://agape.us3.list-manage.com/subscribe/post?u=ed4a5ab9b6a3b90c6e8e2724e&amp;id=1d7140d09b&amp;f_id=00cc94e1f0" method="post" target="_blank">
         
         <!-- NOME E EMAIL -->
         <input type="text" name="FNAME" class="form-input" placeholder="O teu primeiro nome" required>
         <input type="text" name="LNAME" class="form-input" placeholder="O teu apelido" required>
         <input type="email" name="EMAIL" class="form-input" placeholder="O teu email principal" required>
         
-        <!-- DROPDOWN: PERFIL -->
-        <select name="NOME_DO_CAMPO_PERFIL_DO_MAILCHIMP" class="form-input" required>
+        <!-- DROPDOWN: PERFIL (MMERGE7) -->
+        <select name="MMERGE7" class="form-input" required>
           <option value="" disabled selected>O teu perfil / envolvimento...</option>
           <option value="Líder/Pastor">Líder / Pastor</option>
           <option value="Membro de Equipa/Ministério">Membro de Equipa / Ministério</option>
           <option value="Curioso/Interessado">Curioso / Interessado</option>
         </select>
 
-        <!-- DROPDOWN: REGIÃO -->
-        <select name="NOME_DO_CAMPO_REGIAO_DO_MAILCHIMP" class="form-input" required>
+        <!-- DROPDOWN: REGIÃO (MMERGE8) -->
+        <select name="MMERGE8" class="form-input" required>
           <option value="" disabled selected>De que zona és?</option>
           <option value="Norte">Norte</option>
           <option value="Centro">Centro</option>
           <option value="Grande Lisboa">Grande Lisboa</option>
           <option value="Sul">Sul</option>
-          <option value="Ilhas">Ilhas</option>
+          <option value="Illhas">Ilhas</option> <!-- "Illhas" no value bate certo com o erro do Mailchimp -->
         </select>
 
-        <!-- CHECKBOX RGPD -->
-        <!-- O atributo 'required' impede o envio do formulário sem esta caixa selecionada -->
+        <!-- CHECKBOX RGPD (MMERGE9 enviando "Concordo") -->
         <div class="rgpd-wrapper">
-          <input type="checkbox" id="rgpd-check" name="AGREEMENT_NOME_DO_MAILCHIMP" required>
+          <input type="checkbox" id="rgpd-check" name="MMERGE9" value="Concordo" required>
           <label for="rgpd-check">Concordo em receber recursos, novidades e convites do MyFriends por email. Compreendo que posso cancelar a subscrição a qualquer momento, de acordo com o RGPD.</label>
+        </div>
+
+        <!-- CAMPO INVISÍVEL ANTI-SPAM (NÃO APAGAR) -->
+        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+          <input type="text" name="b_ed4a5ab9b6a3b90c6e8e2724e_1d7140d09b" tabindex="-1" value="">
         </div>
         
         <!-- BOTÃO -->
-        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Quero os Recursos</button>
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px; padding: 16px; border: none; cursor: pointer;">Quero os Recursos</button>
         
       </form>
     </main>
