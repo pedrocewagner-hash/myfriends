@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MyFriends | Newsletter</title>
+  
+  <!-- SEO & Partilha -->
+  <meta property="og:title" content="MyFriends | Newsletter">
+  <meta property="og:image" content="https://myfriends.pt/imagem-partilha.jpg">
+  
+  <!-- Fontes Oficiais -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- O teu CSS principal -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Apenas o necessário para centrar a caixa no ecrã (formato Landing Page) */
+    body {
+      background-color: #f7f9fa;
+    }
+    .landing-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .landing-header img {
+      height: 50px;
+      margin-bottom: 40px;
+    }
+    .landing-content {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      max-width: 500px;
+      width: 100%;
+    }
+    .landing-content h1 {
+      font-family: 'Clash Display', sans-serif;
+      color: #38383d;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .landing-content p {
+      color: #6e7d8c;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    /* Estilo limpo para os campos de texto e dropdowns do formulário */
+    .form-input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #dee3e5;
+      border-radius: 8px;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+      font-size: 16px;
+      background-color: #ffffff;
+      color: #38383d;
+    }
+    select.form-input:invalid {
+      color: #6e7d8c;
+    }
+
+    /* Estilo elegante para a checkbox do RGPD */
+    .rgpd-wrapper {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .rgpd-wrapper input[type="checkbox"] {
+      margin-top: 4px;
+      margin-right: 12px;
+      transform: scale(1.2);
+      accent-color: #d70f15; /* Pinta a caixa de vermelho quando selecionada */
+      cursor: pointer;
+    }
+    .rgpd-wrapper label {
+      font-size: 12px;
+      color: #6e7d8c;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="landing-wrapper">
+    <!-- Logotipo que regressa ao site principal -->
+    <header class="landing-header">
+      <a href="index.html">
+        <img src="myfriends-logo.svg" alt="MyFriends">
+      </a>
+    </header>
+
+    <!-- Caixa Branca Central -->
+    <main class="landing-content">
+      <h1>Ferramentas Práticas</h1>
+      <p>Subscreve para receberes recursos, convites e o PDF do <strong>Grupo que VAI!</strong> diretamente na tua caixa de entrada.</p>
+      
+      <!-- O Formulário Limpo com Dropdowns e RGPD -->
+      <form action="LINK_DO_MAILCHIMP_DA_SKYLAR" method="post" target="_blank">
+        
+        <!-- NOME E EMAIL -->
+        <input type="text" name="FNAME" class="form-input" placeholder="O teu primeiro nome" required>
+        <input type="text" name="LNAME" class="form-input" placeholder="O teu apelido" required>
+        <input type="email" name="EMAIL" class="form-input" placeholder="O teu email principal" required>
+        
+        <!-- DROPDOWN: PERFIL -->
+        <select name="NOME_DO_CAMPO_PERFIL_DO_MAILCHIMP" class="form-input" required>
+          <option value="" disabled selected>O teu perfil / envolvimento...</option>
+          <option value="Líder/Pastor">Líder / Pastor</option>
+          <option value="Membro de Equipa/Ministério">Membro de Equipa / Ministério</option>
+          <option value="Curioso/Interessado">Curioso / Interessado</option>
+        </select>
+
+        <!-- DROPDOWN: REGIÃO -->
+        <select name="NOME_DO_CAMPO_REGIAO_DO_MAILCHIMP" class="form-input" required>
+          <option value="" disabled selected>De que zona és?</option>
+          <option value="Norte">Norte</option>
+          <option value="Centro">Centro</option>
+          <option value="Grande Lisboa">Grande Lisboa</option>
+          <option value="Sul">Sul</option>
+          <option value="Ilhas">Ilhas</option>
+        </select>
+
+        <!-- CHECKBOX RGPD -->
+        <!-- O atributo 'required' impede o envio do formulário sem esta caixa selecionada -->
+        <div class="rgpd-wrapper">
+          <input type="checkbox" id="rgpd-check" name="AGREEMENT_NOME_DO_MAILCHIMP" required>
+          <label for="rgpd-check">Concordo em receber recursos, novidades e convites do MyFriends por email. Compreendo que posso cancelar a subscrição a qualquer momento, de acordo com o RGPD.</label>
+        </div>
+        
+        <!-- BOTÃO -->
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Quero os Recursos</button>
+        
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>
