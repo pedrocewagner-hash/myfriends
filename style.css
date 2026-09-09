@@ -360,7 +360,7 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
    PÁGINA LÍDERES: SECÇÃO SHIFT & MATERIAIS
    ============================================ */
 .shift-sec {
-  background-color: #f7f9fa;
+  background-color: #f7f9fa !important;
   padding: 80px 20px;
   text-align: center;
   color: #38383d;
@@ -369,13 +369,13 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 }
 
 .shift-sec h2 {
-  color: #38383d;
+  color: #38383d !important;
   font-size: clamp(28px, 4vw, 40px);
   margin-bottom: 24px;
 }
 
 .shift-text-lead {
-  color: #38383d;
+  color: #38383d !important;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
@@ -383,7 +383,7 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 }
 
 .shift-text-sub {
-  color: #6e7d8c;
+  color: #6e7d8c !important;
   font-size: 16px;
   margin-bottom: 48px;
   line-height: 1.6;
