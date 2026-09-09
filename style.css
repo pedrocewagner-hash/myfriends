@@ -45,6 +45,10 @@ main { padding-top: 64px; }
 section { padding: 64px 20px; }
 .container { max-width: 1100px; margin: 0 auto; }
 .tag { color: #d70f15; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; display: block; }
+/* Retira o vermelho das tags dentro da jornada para não cansar a vista */
+.passo-content .tag {
+  color: #6e7d8c; 
+}
 
 .btn-primary, .btn-secondary {
   display: inline-block; font-family: 'Montserrat', sans-serif;
