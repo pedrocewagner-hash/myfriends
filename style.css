@@ -242,3 +242,86 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   color: #dee3e5;
   margin-bottom: 40px;
 }
+
+/* ============================================
+   ECOSSISTEMA / COMO CAMINHAMOS JUNTOS
+   ============================================ */
+.ecossistema-section { 
+  background-color: #f7f9fa; 
+  padding: 80px 20px; 
+  border-top: 1px solid #dee3e5; 
+  border-bottom: 1px solid #dee3e5; 
+  text-align: center; 
+}
+
+.eco-title { 
+  font-family: 'Clash Display', sans-serif; 
+  font-size: clamp(28px, 4vw, 40px); 
+  font-weight: 600; 
+  color: #38383d; 
+  margin-bottom: 16px; 
+  line-height: 1.2; 
+}
+
+.eco-desc { 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: clamp(15px, 2vw, 16px); 
+  color: #6e7d8c; 
+  margin: 0 auto 56px auto; 
+  max-width: 750px; 
+  line-height: 1.6; 
+  text-wrap: balance;
+}
+
+.eco-linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 56px auto;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.eco-nodo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  z-index: 2;
+  flex: 1;
+  min-width: 100px; /* Garante que não ficam demasiado espremidos no mobile */
+}
+
+.eco-ponto {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d70f15;
+  border: 4px solid #f7f9fa;
+  outline: 2px solid #d70f15;
+}
+
+.eco-texto {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #38383d;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* A linha cinzenta só aparece em ecrãs maiores. No mobile, os pontos funcionam como uma grelha. */
+@media (min-width: 768px) {
+  .eco-linha::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Alinhado ao centro do ponto */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #dee3e5;
+    z-index: 1;
+  }
+}
