@@ -355,32 +355,35 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
     flex: 1;
   }
 }
+
 /* ============================================
    PÁGINA LÍDERES: SECÇÃO SHIFT & MATERIAIS
    ============================================ */
 .shift-sec {
-  background-color: #38383d;
+  background-color: #f7f9fa;
   padding: 80px 20px;
   text-align: center;
-  color: #ffffff;
-  border-top: 4px solid #d70f15;
+  color: #38383d;
+  border-top: 1px solid #dee3e5;
+  border-bottom: 1px solid #dee3e5;
 }
 
 .shift-sec h2 {
-  color: #ffffff;
+  color: #38383d;
   font-size: clamp(28px, 4vw, 40px);
   margin-bottom: 24px;
 }
 
 .shift-text-lead {
-  color: #dee3e5;
+  color: #38383d;
   font-size: 18px;
-  margin-bottom: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
   line-height: 1.6;
 }
 
 .shift-text-sub {
-  color: #dee3e5;
+  color: #6e7d8c;
   font-size: 16px;
   margin-bottom: 48px;
   line-height: 1.6;
@@ -388,10 +391,10 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 
 .materiais-box {
   text-align: left;
-  background: #2b2b2f;
+  background: #ffffff;
   padding: 32px;
   border-radius: 8px;
-  border: 1px solid #4f4f56;
+  border: 1px solid #dee3e5;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -400,7 +403,7 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   font-family: 'Clash Display', sans-serif;
   font-size: 18px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #38383d;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -413,28 +416,30 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 }
 
 .material-card {
-  background: #38383d;
+  background: #f7f9fa;
   padding: 20px;
   border-radius: 6px;
-  border-left: 3px solid #d70f15;
+  border: 1px solid #dee3e5;
+  border-left: 3px solid #38383d;
   text-decoration: none;
   display: block;
-  transition: transform 0.2s;
+  transition: all 0.2s ease;
 }
 
 .material-card:hover {
   transform: translateY(-2px);
+  border-left-color: #d70f15;
 }
 
 .material-card .m-title {
   font-weight: 700;
-  color: #ffffff;
+  color: #38383d !important; /* Garante que o texto fica cinzento escuro */
   font-size: 16px;
 }
 
 .material-card .m-desc {
   font-size: 13px;
-  color: #dee3e5;
+  color: #6e7d8c;
   margin-top: 6px;
   line-height: 1.4;
 }
