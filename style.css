@@ -355,3 +355,86 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
     flex: 1;
   }
 }
+/* ============================================
+   PÁGINA LÍDERES: SECÇÃO SHIFT & MATERIAIS
+   ============================================ */
+.shift-sec {
+  background-color: #38383d;
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  border-top: 4px solid #d70f15;
+}
+
+.shift-sec h2 {
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 24px;
+}
+
+.shift-text-lead {
+  color: #dee3e5;
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.shift-text-sub {
+  color: #dee3e5;
+  font-size: 16px;
+  margin-bottom: 48px;
+  line-height: 1.6;
+}
+
+.materiais-box {
+  text-align: left;
+  background: #2b2b2f;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid #4f4f56;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.materiais-title {
+  font-family: 'Clash Display', sans-serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.materiais-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.material-card {
+  background: #38383d;
+  padding: 20px;
+  border-radius: 6px;
+  border-left: 3px solid #d70f15;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.material-card:hover {
+  transform: translateY(-2px);
+}
+
+.material-card .m-title {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.material-card .m-desc {
+  font-size: 13px;
+  color: #dee3e5;
+  margin-top: 6px;
+  line-height: 1.4;
+}
