@@ -273,27 +273,39 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   text-wrap: balance;
 }
 
+/* 1. Mobile First: Linha Vertical */
 .eco-linha {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   max-width: 900px;
   margin: 0 auto 56px auto;
-  flex-wrap: wrap;
   gap: 32px;
+}
+
+.eco-linha::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: #dee3e5;
+  z-index: 1;
 }
 
 .eco-nodo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   z-index: 2;
-  flex: 1;
-  min-width: 100px; /* Garante que não ficam demasiado espremidos no mobile */
+  width: 100%;
 }
 
+/* As bolinhas vermelhas e o texto (Essenciais!) */
 .eco-ponto {
   width: 16px;
   height: 16px;
@@ -312,16 +324,24 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   letter-spacing: 0.05em;
 }
 
-/* A linha cinzenta só aparece em ecrãs maiores. No mobile, os pontos funcionam como uma grelha. */
+/* 2. Desktop: Linha Horizontal (A partir de 768px) */
 @media (min-width: 768px) {
+  .eco-linha {
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .eco-linha::before {
-    content: '';
-    position: absolute;
-    top: 10px; /* Alinhado ao centro do ponto */
+    top: 10px;
+    bottom: auto;
     left: 10%;
     right: 10%;
+    width: auto;
     height: 2px;
-    background-color: #dee3e5;
-    z-index: 1;
+    transform: none;
   }
+  .eco-nodo {
+    flex: 1;
+    width: auto;
+  }
+}
 }
