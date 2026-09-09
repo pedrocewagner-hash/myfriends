@@ -256,12 +256,12 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 
 .eco-title { 
   font-family: 'Clash Display', sans-serif; 
-  font-size: clamp(28px, 4vw, 40px); 
-  font-weight: 600; 
+  /* Aumentámos o tamanho mínimo de 28px para 36px, e o máximo para 48px */
+  font-size: clamp(36px, 8vw, 48px); 
+  font-weight: 700; /* Demos-lhe o peso máximo para se impor */
   color: #38383d; 
-  margin-bottom: 16px; 
-  line-height: 1.2; 
-  letter-spacing: 0.05em;
+  line-height: 1.1; 
+  letter-spacing: 0.02em;
 }
 
 .eco-desc { 
