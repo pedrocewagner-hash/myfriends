@@ -256,12 +256,18 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 
 .eco-title { 
   font-family: 'Clash Display', sans-serif; 
-  /* Aumentámos o tamanho mínimo de 28px para 36px, e o máximo para 48px */
-  font-size: clamp(36px, 8vw, 48px); 
-  font-weight: 700; /* Demos-lhe o peso máximo para se impor */
-  color: #38383d; 
+  font-weight: 700; 
+  color: #38383d; /* Voltamos ao teu cinza escuro original */
   line-height: 1.1; 
   letter-spacing: 0.02em;
+  font-size: 32px; /* O tamanho perfeito e legível para Mobile */
+}
+
+/* Regra específica para o Desktop (Ecrãs maiores) */
+@media (min-width: 768px) {
+  .eco-title {
+    font-size: 48px; /* Fica enorme e proporcional no PC */
+  }
 }
 
 .eco-desc { 
