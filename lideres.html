@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<!-- Cache busting com v=7 -->
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -38,7 +39,7 @@
     </div>
   </section>
 
-  <!-- A VISÃO (O ECOSSISTEMA APLICADO À IGREJA) -->
+  <!-- A ESTRUTURA (O ECOSSISTEMA APLICADO À IGREJA) -->
   <section class="jornada">
     <div class="container">
       <div style="text-align: center; margin-bottom: 48px;">
@@ -62,7 +63,7 @@
         <div class="passo-content">
           <span class="tag">Equipar os membros</span>
           <h2>Formação</h2>
-          <p>Fornecemos as ferramentas e os paradigmas para que os teus membros saibam como fazer discípulos na prática. Passamos da teoria à ação com ferramentas simples e relacionais que qualquer cristão pode aplicar.</p>
+          <p>Fornecemos ferramentas e paradigmas para que os teus membros saibam como fazer discípulos na prática. Passamos da teoria à ação com ferramentas simples e relacionais que qualquer cristão pode aplicar.</p>
         </div>
       </div>
 
@@ -98,48 +99,54 @@
 
     </div>
   </section>
-  
-  <!-- SECÇÃO SHIFT -->
-  <section class="shift-sec">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-      <h2>A porta de entrada: SHIFT</h2>
-      <p class="shift-text-lead">
-        O teu tempo é precioso. Para que esta parceria gere transformação real, o ponto de partida é o <strong>SHIFT</strong>.
-      </p>
-      <p class="shift-text-sub">
-        Isto significa que pedimos à tua equipa o compromisso de investir 9 dias num ano. É o espaço necessário para nos conhecermos, alinharmos o paradigma e descobrirmos juntos como Jesus criou o seu movimento.
-      </p>
-  
-      <!-- GRELHA DE MATERIAIS -->
-      <div class="materiais-box">
-        <div class="materiais-title">Materiais Essenciais do SHIFT</div>
-        <div class="materiais-grid">
-          <a class="material-card" href="https://harmony-bible.com/" target="_blank" rel="noopener">
+
+  <!-- O FILTRO (MESA DE PROVA E SHIFT) -->
+  <section class="shift-light-sec">
+    <div class="container">
+      
+      <div class="shift-light-header">
+        <h2>A porta de entrada: SHIFT</h2>
+        <p>Para que esta parceria gere transformação real, o ponto de partida é o <strong>SHIFT</strong>.</p>
+      </div>
+
+      <div class="shift-main-card">
+        <h3>O compromisso: 9 Dias</h3>
+        <p>A expectativa de entrada no nosso ecossistema é que a tua equipa invista 9 dias num ano (divididos em 3 módulos). É o espaço necessário para nos conhecermos, alinharmos o paradigma e descobrirmos juntos como Jesus criou o seu movimento.</p>
+        
+        <!-- O APERITIVO -->
+        <div class="mesa-prova-box">
+          <h4>Queres testar antes de avançar? (Mesa de Prova)</h4>
+          <p>Sabemos que 9 dias é um compromisso grande. Por isso, oferecemos uma <strong>Mesa de Prova</strong>: 1 manhã presencial com a tua equipa para explorarmos o modelo e percebermos se o SHIFT faz sentido para vocês, sem compromissos.</p>
+        </div>
+
+        <div class="materiais-mini-title">Materiais essenciais incluídos no SHIFT:</div>
+        <div class="materiais-mini-grid">
+          <a class="material-item" href="https://harmony-bible.com/" target="_blank" rel="noopener">
             <div class="m-title">Harmony Bible</div>
             <div class="m-desc">Ler os Evangelhos de forma cronológica.</div>
           </a>
-          <a class="material-card" href="https://knowinghim.app/Home" target="_blank" rel="noopener">
+          <a class="material-item" href="https://knowinghim.app/Home" target="_blank" rel="noopener">
             <div class="m-title">Knowing Him</div>
             <div class="m-desc">50 dias a aprender como Jesus criou o seu movimento.</div>
           </a>
         </div>
       </div>
-  
+
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE CONTACTO PADRÃO -->
+  <!-- FORMULÁRIO (MARCAR CONVERSA) PADRÃO -->
   <section id="contacto" class="contacto-simples">
     <div class="container form-container">
       <h2>Vamos avaliar a parceria?</h2>
-      <p>Se a tua equipa está disposta a fazer o SHIFT e a assumir um compromisso com a multiplicação, preenche o formulário. Marcamos um encontro para conversarmos.</p>
+      <p>Se a tua equipa está disposta a assumir um compromisso com a multiplicação, preenche o formulário. Marcamos um encontro para conversarmos sobre a Mesa de Prova ou o SHIFT.</p>
       
       <form class="mf-form" action="https://formspree.io/f/xbdvqldb" method="POST">
         <input type="hidden" name="_next" value="https://myfriends.pt/obrigado.html">
         <input type="text" name="Nome" placeholder="O teu nome e cargo/função" required>
         <input type="text" name="Igreja" placeholder="Nome da Igreja ou Equipa" required>
         <input type="email" name="Email" placeholder="O teu email" required>
-        <textarea name="Mensagem" rows="5" placeholder="Fala-nos brevemente da vossa comunidade e do vosso interesse no SHIFT..." required></textarea>
+        <textarea name="Mensagem" rows="5" placeholder="Fala-nos brevemente da vossa comunidade e se têm interesse em começar pela Mesa de Prova..." required></textarea>
         <button type="submit">Pedir contacto para avaliação</button>
       </form>
     </div>
