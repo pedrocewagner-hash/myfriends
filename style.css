@@ -357,89 +357,124 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
 }
 
 /* ============================================
-   PÁGINA LÍDERES: SECÇÃO SHIFT & MATERIAIS
+   PÁGINA LÍDERES: SHIFT & MESA DE PROVA
    ============================================ */
-.shift-sec {
-  background-color: #f7f9fa !important;
+.shift-light-sec {
+  background-color: #ffffff;
   padding: 80px 20px;
-  text-align: center;
-  color: #38383d;
   border-top: 1px solid #dee3e5;
   border-bottom: 1px solid #dee3e5;
 }
 
-.shift-sec h2 {
-  color: #38383d !important;
+.shift-light-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.shift-light-header h2 {
+  font-family: 'Clash Display', sans-serif;
   font-size: clamp(28px, 4vw, 40px);
-  margin-bottom: 24px;
-}
-
-.shift-text-lead {
-  color: #38383d !important;
-  font-size: 18px;
-  font-weight: 600;
+  color: #38383d;
   margin-bottom: 16px;
-  line-height: 1.6;
 }
 
-.shift-text-sub {
-  color: #6e7d8c !important;
+.shift-light-header p {
+  color: #6e7d8c;
   font-size: 16px;
-  margin-bottom: 48px;
   line-height: 1.6;
 }
 
-.materiais-box {
-  text-align: left;
-  background: #ffffff;
-  padding: 32px;
-  border-radius: 8px;
+.shift-main-card {
+  background: #f7f9fa; /* O teu cinzento muito clarinho */
   border: 1px solid #dee3e5;
+  border-radius: 12px;
+  padding: clamp(24px, 5vw, 48px);
   max-width: 800px;
   margin: 0 auto;
 }
 
-.materiais-title {
+.shift-main-card h3 {
   font-family: 'Clash Display', sans-serif;
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 24px;
   color: #38383d;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  margin-bottom: 12px;
 }
 
-.materiais-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.shift-main-card p {
+  color: #6e7d8c;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 24px;
 }
 
-.material-card {
-  background: #f7f9fa;
-  padding: 20px;
-  border-radius: 6px;
+/* O Aperitivo: Mesa de Prova */
+.mesa-prova-box {
+  background-color: transparent; /* Sem branco */
   border: 1px solid #dee3e5;
-  border-left: 3px solid #38383d;
-  text-decoration: none;
-  display: block;
-  transition: all 0.2s ease;
+  border-left: 3px solid #d70f15;
+  padding: 20px 24px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 32px;
 }
 
-.material-card:hover {
-  transform: translateY(-2px);
-  border-left-color: #d70f15;
-}
-
-.material-card .m-title {
+.mesa-prova-box h4 {
+  color: #d70f15;
+  font-size: 13px;
+  text-transform: uppercase;
   font-weight: 700;
-  color: #38383d !important;
-  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.mesa-prova-box p {
+  color: #38383d;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Materiais perfeitamente integrados no cinza */
+.materiais-mini-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6e7d8c;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  border-top: 1px solid #dee3e5;
+  padding-top: 24px;
+}
+
+.materiais-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.material-item {
+  display: block;
+  background: transparent; /* Sem branco */
+  padding: 16px;
+  border: 1px solid #dee3e5;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.material-item:hover {
+  border-color: #38383d;
+  background: #dee3e5; /* Escurece ligeiramente no hover em vez de ir para branco */
+}
+
+.material-item .m-title {
+  color: #38383d;
+  font-weight: 700;
+  font-size: 15px;
   margin-bottom: 4px;
 }
 
-.material-card .m-desc {
+.material-item .m-desc {
+  color: #6e7d8c;
   font-size: 13px;
-  color: #6e7d8c !important;
   line-height: 1.4;
 }
