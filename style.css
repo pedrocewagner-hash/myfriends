@@ -715,3 +715,78 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   background-color: #f7f9fa;
   border-color: #38383d;
 }
+
+/* ============================================
+   PÁGINA ADVENTO: FORMULÁRIO (FOLLOW UP)
+   ============================================ */
+.advento-form-sec {
+  background-color: #f7f9fa; /* Fundo suave para contrastar e separar secções */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.advento-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.advento-form-container h2 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  color: #38383d; /* Força o texto a escuro */
+  margin-bottom: 16px;
+}
+
+.advento-form-container > p {
+  color: #6e7d8c; /* Força o texto a cinza escuro */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.advento-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.advento-form input,
+.advento-form select,
+.advento-form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #dee3e5;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #38383d;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+  -webkit-appearance: none; /* Remove estilos padrão feios no iOS/Safari */
+  appearance: none;
+}
+
+.advento-form input:focus,
+.advento-form select:focus,
+.advento-form textarea:focus {
+  outline: none;
+  border-color: #d70f15;
+}
+
+.advento-form button {
+  background-color: #d70f15;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.advento-form button:hover {
+  background-color: #b30a10;
+}
