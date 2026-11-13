@@ -317,5 +317,21 @@ Guia completo em: myfriends.pt/advento</div>
   }
 </script>
 
+  <!-- SCRIPT PARA CORRIGIR O SALTO DOS CARTÕES -->
+<script>
+  const cartoes = document.querySelectorAll('details[name="semanas"]');
+  
+  cartoes.forEach(cartao => {
+    cartao.addEventListener('toggle', () => {
+      if (cartao.open) {
+        // Aguarda um milissegundo para o browser fechar o cartão anterior e recalcular a altura da página
+        setTimeout(() => {
+          cartao.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 50);
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>
