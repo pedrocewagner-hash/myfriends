@@ -9,7 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<!-- Cache busting v=9 -->
+<link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -27,15 +28,43 @@
 
 <main>
 
-  <!-- HERO ADVENTO -->
-  <section class="hero-page">
+  <!-- HERO ADVENTO (VERMELHO NATALÍCIO) -->
+  <section class="hero-advento">
     <div class="container">
-      <span class="tag" style="color: #d70f15;">Recurso de Natal</span>
+      <span class="tag">Recurso de Natal</span>
       <h1>ADVENTO MYFRIENDS</h1>
       <p style="max-width: 800px; margin: 0 auto;">
         <strong>4 semanas para viver o Natal com amigos.</strong><br><br>
-        Dezembro já está cheio de jantares, cafés e reencontros. Em vez de criares mais eventos na agenda, usa as conversas que já vão acontecer. Este guia simples ajuda-te a escutar os teus amigos, partilhar as tuas vivências com Jesus, orar pelas suas fragilidades e descobrir juntos a história do Natal.
+        Dezembro já está cheio de jantares, cafés e reencontros. Em vez de criares mais eventos na agenda, usa as conversas que já vão acontecer. Este guia simples ajuda-te a escutar, partilhar vivências, orar por fragilidades e descobrir a história do Natal.
       </p>
+    </div>
+  </section>
+
+  <!-- OVERVIEW VISUAL RÁPIDO -->
+  <section class="advento-overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-card">
+          <span class="overview-semana">Semana 1</span>
+          <h4>Escuta e História</h4>
+          <p>Faz boas perguntas num café ou jantar e ouve a história do teu amigo sem pressa.</p>
+        </div>
+        <div class="overview-card">
+          <span class="overview-semana">Semana 2</span>
+          <h4>A Tua Experiência</h4>
+          <p>Lê um texto do Natal a sós e depois partilha a tua vivência recente com Jesus.</p>
+        </div>
+        <div class="overview-card">
+          <span class="overview-semana">Semana 3</span>
+          <h4>Fragilidade</h4>
+          <p>Conversa sobre os desafios desta época e faz uma oração rápida pelo teu amigo.</p>
+        </div>
+        <div class="overview-card">
+          <span class="overview-semana">Semana 4</span>
+          <h4>História de Jesus</h4>
+          <p>Leiam o texto do Natal juntos e descubram que passos de mudança podem dar.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -159,7 +188,7 @@
     </div>
   </section>
 
-  <!-- KIT DE WHATSAPP PARA LÍDERES -->
+  <!-- KIT DE WHATSAPP PARA LÍDERES (DESIGN BOLHAS) -->
   <section id="kit-lideres" class="whatsapp-kit-sec">
     <div class="container">
       
@@ -260,22 +289,17 @@ Guia completo em: myfriends.pt/advento</div>
 <!-- SCRIPT DOS BOTÕES COPIAR -->
 <script>
   function copiarTexto(idElemento, botao) {
-    // Apanha o texto da caixa correspondente
     var texto = document.getElementById(idElemento).innerText;
-    
-    // API moderna de cópia para a área de transferência
     navigator.clipboard.writeText(texto).then(function() {
-      // Muda o texto do botão temporariamente para dar feedback
       var textoOriginal = botao.innerText;
       botao.innerText = "✓ Copiado!";
-      botao.style.backgroundColor = "#d70f15";
-      botao.style.color = "#ffffff";
+      botao.style.borderColor = "#38383d";
+      botao.style.backgroundColor = "#f7f9fa";
       
-      // Volta ao normal passado 2 segundos
       setTimeout(function() {
         botao.innerText = textoOriginal;
+        botao.style.borderColor = "#dee3e5";
         botao.style.backgroundColor = "#ffffff";
-        botao.style.color = "#38383d";
       }, 2000);
     });
   }
