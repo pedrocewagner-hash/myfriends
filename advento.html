@@ -223,25 +223,34 @@
   </section>
 
   <!-- FORMULÁRIO DE HISTÓRIAS / FOLLOW UP -->
-  <section id="partilha" class="contacto-simples" style="background-color: #ffffff; border-bottom: 1px solid #dee3e5;">
-    <div class="container form-container">
+  <section id="partilha" class="advento-form-sec">
+    <div class="advento-form-container">
       <h2>Partilha a tua história</h2>
       <p>Quer tenhas tido conversas fantásticas com os teus amigos, quer procures ajuda para dar os próximos passos (como cristão ou líder), deixa-nos uma mensagem. Lemos todas com atenção.</p>
       
-      <form class="mf-form" action="https://formspree.io/f/xbdvqldb" method="POST">
+      <form class="advento-form" action="https://formspree.io/f/xbdvqldb" method="POST">
         <input type="hidden" name="_next" value="https://myfriends.pt/obrigado.html">
+        
         <input type="text" name="Nome" placeholder="O teu nome" required>
+        
         <input type="email" name="Email" placeholder="O teu email" required>
         
-        <select name="Motivo" required style="width: 100%; padding: 14px 16px; border: 1px solid #dee3e5; border-radius: 6px; font-size: 15px; color: #38383d; margin-bottom: 16px; background-color: #f7f9fa; font-family: inherit;">
-          <option value="" disabled selected>Qual o motivo do contacto?</option>
-          <option value="História de Advento">Quero partilhar uma história do Advento</option>
-          <option value="Próximos Passos Pessoais">Quero ajuda para os meus próximos passos (Cristão)</option>
-          <option value="Próximos Passos Liderança">Utilizei o guia com o meu grupo (Líder)</option>
-          <option value="Outro">Outro assunto</option>
-        </select>
+        <!-- O select tem a seta desenhada por CSS base para ficar elegante -->
+        <div style="position: relative;">
+          <select name="Motivo" required>
+            <option value="" disabled selected>Qual o motivo do contacto?</option>
+            <option value="História de Advento">Quero partilhar uma história do Advento</option>
+            <option value="Próximos Passos Pessoais">Quero ajuda para os meus próximos passos (Cristão)</option>
+            <option value="Próximos Passos Liderança">Utilizei o guia com o meu grupo (Líder)</option>
+            <option value="Outro">Outro assunto</option>
+          </select>
+          <div style="position: absolute; right: 16px; top: 18px; pointer-events: none; color: #6e7d8c;">
+            ▼
+          </div>
+        </div>
 
         <textarea name="Mensagem" rows="5" placeholder="Conta-nos como correu ou diz-nos como te podemos ajudar..." required></textarea>
+        
         <button type="submit">Enviar mensagem</button>
       </form>
     </div>
