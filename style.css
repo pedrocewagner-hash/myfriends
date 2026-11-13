@@ -517,42 +517,54 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   font-weight: 600;
 }
 
-/* OVERVIEW DAS 4 SEMANAS */
-.advento-overview {
+/* ============================================
+   PÁGINA ADVENTO: CARTÕES EXPANSÍVEIS (SEMANAS)
+   ============================================ */
+.advento-accordions {
   background-color: #f7f9fa;
   padding: 60px 20px;
   border-bottom: 1px solid #dee3e5;
 }
 
-.overview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
+.accordions-container {
+  max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.overview-card {
+.semana-card {
   background: #ffffff;
   border-top: 4px solid #d70f15;
-  padding: 24px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  text-align: center;
+  overflow: hidden; /* Mantém os cantos redondos */
 }
 
-.overview-card h4 {
-  font-family: 'Clash Display', sans-serif;
-  color: #38383d;
-  font-size: 18px;
-  margin-bottom: 8px;
+/* Esconde a seta padrão feia do HTML */
+.semana-card summary::-webkit-details-marker {
+  display: none;
 }
 
-.overview-card p {
-  font-size: 14px;
-  color: #6e7d8c;
-  margin-bottom: 0;
-  line-height: 1.5;
+.semana-card summary {
+  list-style: none;
+  padding: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.semana-card summary:hover {
+  background-color: #fcfcfc;
+}
+
+/* O conteúdo do resumo (Overview) */
+.summary-content {
+  flex-grow: 1;
+  padding-right: 20px;
 }
 
 .overview-semana {
@@ -560,8 +572,69 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   text-transform: uppercase;
   font-weight: 700;
   color: #d70f15;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   display: block;
+}
+
+.summary-content h4 {
+  font-family: 'Clash Display', sans-serif;
+  color: #38383d;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.summary-content p {
+  font-size: 15px;
+  color: #6e7d8c;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* O ícone de + e - */
+.icon-expand {
+  font-size: 24px;
+  color: #d70f15;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+
+.semana-card[open] .icon-expand {
+  transform: rotate(45deg); /* Transforma o + num X suave quando aberto */
+}
+
+/* O conteúdo detalhado lá dentro */
+.semana-details {
+  padding: 0 24px 32px;
+  border-top: 1px solid #dee3e5;
+  margin-top: 16px;
+  padding-top: 24px;
+}
+
+.semana-details p {
+  color: #38383d;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.semana-details .mini-title {
+  font-weight: 600;
+  color: #38383d;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.semana-details ul {
+  margin-left: 20px;
+  color: #6e7d8c;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.semana-details .caixa-destaque {
+  background: #f7f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 24px;
 }
 
 /* KIT DE WHATSAPP (CORES E BOLHAS REAIS) */
