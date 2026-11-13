@@ -539,7 +539,8 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   border-top: 4px solid #d70f15;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-  overflow: hidden; /* Mantém os cantos redondos */
+  overflow: hidden;
+  scroll-margin-top: 100px; /* <--- Adiciona esta linha */
 }
 
 /* Esconde a seta padrão feia do HTML */
