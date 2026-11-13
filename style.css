@@ -478,3 +478,74 @@ footer { background: #fff; border-top: 1px solid #dee3e5; padding: 48px 20px 24p
   font-size: 13px;
   line-height: 1.4;
 }
+
+/* ============================================
+   PÁGINA ADVENTO: KIT DE WHATSAPP PARA LÍDERES
+   ============================================ */
+.whatsapp-kit-sec {
+  background-color: #2b2b2f;
+  padding: 80px 20px;
+  color: #ffffff;
+  border-top: 4px solid #d70f15;
+}
+
+.whatsapp-kit-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.whatsapp-kit-header h2 {
+  font-family: 'Clash Display', sans-serif;
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 16px;
+}
+
+.whatsapp-msg-card {
+  background: #38383d;
+  padding: 32px;
+  border-radius: 8px;
+  border: 1px solid #4f4f56;
+  max-width: 700px;
+  margin: 0 auto 24px;
+}
+
+.whatsapp-msg-title {
+  color: #d70f15;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.whatsapp-msg-content {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif; /* Fonte de sistema para parecer app */
+  font-size: 15px;
+  color: #dee3e5;
+  line-height: 1.6;
+  white-space: pre-wrap; /* Mantém as quebras de linha exatas para o copy-paste */
+  background: #2b2b2f;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.btn-copiar {
+  background-color: #ffffff;
+  color: #38383d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-copiar:hover {
+  background-color: #dee3e5;
+}
